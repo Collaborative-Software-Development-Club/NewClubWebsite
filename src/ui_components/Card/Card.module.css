@@ -1,0 +1,27 @@
+.card {
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    /* background: linear-gradient(45deg, var(--card-background-start),var(--card-background-end)); */
+    background-color: var(--card-background);
+    /* filter: var(--card-shadow); */
+    /* color: var(--cream); */
+    color: var(--black);
+    padding: 30px;
+    min-width: 250px;
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+
+    /* 
+    border: solid 2px transparent;
+    border-radius: 20px;
+    background-image: linear-gradient(white, white),
+        radial-gradient(circle at top left, var(--card-stroke-start),var(--card-stroke-end));
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    */
+}
+
+.card > * {
+    flex-grow: 1
+}

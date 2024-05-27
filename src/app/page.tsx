@@ -1,3 +1,24 @@
+import styles from './page.module.css'
+import Content from '@/components/Content'
+import HeroSection from '@/layouts/HeroSection'
+import MoreInfoSection from '@/layouts/MoreInfoSection'
+import Navigation from '@/components/Navigation'
+import WebsiteFooter from '@/components/WebsiteFooter'
+
+export default function Home() {
+    return (
+        <main className={styles.main}>
+            <Navigation/>
+            <Content>
+                <HeroSection />
+                <MoreInfoSection />
+            </Content>
+            <WebsiteFooter/>
+        </main>
+    )
+}
+
+/*
 import Image from "next/image";
 import styles from "./page.module.css";
 
@@ -93,3 +114,4 @@ export default function Home() {
     </main>
   );
 }
+*/

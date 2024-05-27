@@ -1,0 +1,12 @@
+.subtitle {
+    font-size: 32px;
+    color: var(--blue);
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .subtitle{
+        font-size: 24px;
+    }
+}

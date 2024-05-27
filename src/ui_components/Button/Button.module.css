@@ -1,0 +1,37 @@
+.button {
+    all: unset;    
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: 0.2s ease-out;
+    text-align: center;
+    border-width: 3px;
+    border-style: solid;
+}
+.button:hover, .button:active, .button:focus {
+    background-color: var(--cream);
+    color: var(--black);
+    scale: 1.1;
+    z-index: 20;
+    border-color: var(--cream);
+    filter: drop-shadow(10px 0px 20px var(--cream-shadow));
+}
+
+.primary {
+    background-color: var(--blue);
+    color: var(--white);
+    border-color: var(--blue);
+    filter: drop-shadow(10px 0px 20px var(--blue-shadow));
+}
+
+.secondary {
+    border-color: var(--blue);
+    filter: drop-shadow(10px 0px 20px var(--blue-shadow));
+}
+
+.terciary {
+    color: var(--cream);
+    text-decoration: underline;
+    border-color: transparent;
+    filter: drop-shadow(10px 0px 20px var(--cream-shadow));
+}

@@ -1,0 +1,12 @@
+.joinDiscordWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.floating {
+    position: fixed;
+    bottom: 4rem;
+    right: 4rem;
+    z-index: 2;
+}

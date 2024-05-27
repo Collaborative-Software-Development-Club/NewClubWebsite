@@ -1,0 +1,7 @@
+.tag {
+    text-align: center;
+    background: var(--red);
+    color: var(--cream);
+    padding: 5px 10px;
+    border-radius: 10px;
+}

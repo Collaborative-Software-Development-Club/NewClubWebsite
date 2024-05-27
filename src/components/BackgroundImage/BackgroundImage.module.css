@@ -1,0 +1,22 @@
+.backgroundImage {
+    filter: blur(50px);
+    animation: flicker 3s infinite alternate ease-in-out;
+    position: relative;
+    padding: 50px;
+}
+
+.imageContainer {
+    height: 70vh;
+    position: absolute;
+    width: 100%;
+    z-index: -10;
+}
+
+@keyframes flicker {
+    from  {
+        opacity: 40%;
+    }
+    to {
+        opacity: 60%; 
+    }
+}
