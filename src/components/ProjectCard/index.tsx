@@ -16,7 +16,7 @@ export interface ProjectCardProps {
 const ProjectCard = (props: ProjectCardProps) => {
     return (
         <Card>
-            <FlexContainer justifyContent="space-between" direction="column">
+            <FlexContainer justifyContent="space-between" direction="column" fill>
                 <FlexContainer direction="column">
                     <Heading4>{props.title}</Heading4>
                     <FlexContainer direction="row" wrap>

@@ -6,7 +6,6 @@
     /* filter: var(--card-shadow); */
     /* color: var(--cream); */
     color: var(--black);
-    padding: 30px;
     min-width: 250px;
     width: 380px;
     display: flex;
