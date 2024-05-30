@@ -1,7 +1,8 @@
 import styles from "./Button.module.css"
+import Link from "next/link"
 
 const LinkButton = (props: LinkButtonProps) => {
-    return <a href={props.href} className={`${styles.button} ${styles[props.variant]}`}>{props.children}</a>
+    return <Link href={props.href} >{props.children}</Link>
 }
 
 export default LinkButton
