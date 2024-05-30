@@ -5,8 +5,8 @@
     top: 0;
     backdrop-filter: blur(10px);
     /* padding: 30px; */
-    z-index: 2;
-    animation: 0.1s ease
+    z-index: 10;
+    animation: 0.1s ease;
 }
 
 .navlinks {
