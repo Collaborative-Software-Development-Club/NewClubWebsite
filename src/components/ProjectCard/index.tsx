@@ -26,7 +26,7 @@ const ProjectCard = (props: ProjectCardProps) => {
                     </FlexContainer>
                     <Paragraph>{props.description}</Paragraph>
                 </FlexContainer>
-                <Button href={props.url} variant="primary">
+                <Button href={props.url} variant="primary" theme="light">
                     Check it out!
                 </Button>
             </FlexContainer>

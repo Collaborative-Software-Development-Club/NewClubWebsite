@@ -1,5 +1,5 @@
 .button {
-    all: unset;    
+    all: unset;
     padding: 10px 20px;
     border-radius: 6px;
     font-weight: 500;
@@ -7,14 +7,6 @@
     text-align: center;
     border-width: 3px;
     border-style: solid;
-}
-.button:hover, .button:active, .button:focus {
-    background-color: var(--cream);
-    color: var(--black);
-    scale: 1.1;
-    z-index: 20;
-    border-color: var(--cream);
-    filter: drop-shadow(10px 0px 20px var(--cream-shadow));
 }
 
 .primary {
@@ -25,13 +17,54 @@
 }
 
 .secondary {
-    border-color: var(--blue);
     filter: drop-shadow(10px 0px 20px var(--blue-shadow));
+    border-color: var(--blue);
+}
+
+.secondary.light {
+    color: var(--black);
 }
 
 .terciary {
-    color: var(--cream);
     text-decoration: underline;
     border-color: transparent;
     filter: drop-shadow(10px 0px 20px var(--cream-shadow));
+}
+
+.terciary.dark {
+    color: var(--cream);
+}
+
+.terciary.light {
+    color: var(--black);
+}
+
+.button:hover,
+.button:active,
+.button:focus {
+    color: var(--black);
+    scale: 1.1;
+    z-index: 20;
+}
+
+.dark:hover,
+.dark:active,
+.dark:focus {
+    background-color: var(--cream);
+    border-color: var(--cream);
+    filter: drop-shadow(10px 0px 20px var(--cream-shadow));
+}
+.light:hover,
+.light:active,
+.light:focus {
+    background-color: var(--black);
+    border-color: var(--black);
+    filter: drop-shadow(10px 0px 20px var(--cream-shadow));
+    color: var(--cream);
+}
+
+.light {
+}
+
+.light {
 }
