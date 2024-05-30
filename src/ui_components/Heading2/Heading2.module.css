@@ -1,16 +1,16 @@
-.heading1 {
-    font-size: 96px;
+.heading2 {
+    font-size: 60px;
     overflow-wrap: break-word;
 }
 
 @media screen and (max-width: 1400px) {
-    .heading1 {
-        font-size: 64px;
+    .heading2 {
+        font-size: 40px;
     }
 }
 
 @media screen and (max-width: 600px) {
-    .heading1 {
+    .heading2 {
         font-size: 30px;
     }
 }

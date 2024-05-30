@@ -5,15 +5,18 @@ import FlexContainer from '@/ui_components/FlexContainer'
 import ProjectCard, { ProjectCardProps } from '@/components/ProjectCard'
 import Section from '@/ui_components/Section'
 import TextBulletedList from '@/ui_components/TextBulletedList'
+import RotatingText from '@/ui_components/RotatingText'
+import Subtitle from '@/ui_components/Subtitle'
+import Heading1 from '@/ui_components/Heading1'
 
 const MoreInfoSection = () => {
     return (
-        <Section id='info'>
+        <Section id="info">
             <FlexContainer direction={'row'} gap="2rem" convertToVerticalOnMobile>
-                <FlexContainer direction="column" alignItems='start'>
-                    <Heading2>{SECTION_HEADING}</Heading2>
-                    <TextBulletedList bullets={BULLET_POINTS}/>
-                    <Button variant='secondary' href="">
+                <FlexContainer direction="column" alignItems="start">
+                    <RotatingText />
+                    <TextBulletedList bullets={BULLET_POINTS} />
+                    <Button variant="secondary" href="">
                         {OFFICERS_CTA}
                     </Button>
                     <Button variant={'terciary'} href="">
@@ -22,7 +25,7 @@ const MoreInfoSection = () => {
                 </FlexContainer>
                 <FlexContainer direction="column">
                     <Heading3>{PROJECTS_HEADING}</Heading3>
-                    <FlexContainer direction="row" alignItems='stretch' scroll>
+                    <FlexContainer direction="row" alignItems="stretch" scroll>
                         <ProjectCard {...BLOG_PROJECT} />
                         <ProjectCard {...TOWER_CONTROL_PROJECT} />
                     </FlexContainer>
@@ -34,7 +37,6 @@ const MoreInfoSection = () => {
 
 export default MoreInfoSection
 
-const SECTION_HEADING = 'What We Do'
 const BULLET_POINTS = [
     'We are a student org focused on working in collaborative software development projects.',
     'Gain technical experience in software development as a way of building your portfolio.',

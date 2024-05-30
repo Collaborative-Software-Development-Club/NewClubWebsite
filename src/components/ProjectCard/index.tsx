@@ -1,9 +1,9 @@
 import FlexContainer from '@/ui_components/FlexContainer'
 import Button from '../../ui_components/Button'
 import Card from '../../ui_components/Card'
-import Heading4 from '../../ui_components/Heading4'
 import Paragraph from '../../ui_components/Paragraph'
 import styles from './ProjectCard.module.css'
+import Heading3 from '@/ui_components/Heading3'
 
 export interface ProjectCardProps {
     title: string
@@ -18,7 +18,7 @@ const ProjectCard = (props: ProjectCardProps) => {
         <Card>
             <FlexContainer justifyContent="space-between" direction="column" fill>
                 <FlexContainer direction="column">
-                    <Heading4>{props.title}</Heading4>
+                    <Heading3>{props.title}</Heading3>
                     <FlexContainer direction="row" wrap>
                         {props.tags.map((tag) => (
                             <div className={styles.tag}>{tag}</div>
