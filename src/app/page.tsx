@@ -4,16 +4,18 @@ import HeroSection from '@/layouts/HeroSection'
 import MoreInfoSection from '@/layouts/MoreInfoSection'
 import Navigation from '@/components/Navigation'
 import WebsiteFooter from '@/components/WebsiteFooter'
+import ProjectsSection from '@/layouts/ProjectsSection'
 
 export default function Home() {
     return (
         <main className={styles.main}>
-            <Navigation/>
+            <Navigation />
             <Content>
                 <HeroSection />
                 <MoreInfoSection />
+                <ProjectsSection />
             </Content>
-            <WebsiteFooter/>
+            <WebsiteFooter />
         </main>
     )
 }

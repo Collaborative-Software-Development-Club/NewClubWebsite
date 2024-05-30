@@ -10,7 +10,7 @@ Maybe there is a way with javascript but I didn't want to ge into it.
 
 const RotatingText = () => {
     return (
-        <h2 className={styles.outer}>
+        <div className={styles.outer}>
             <div className={styles.inner}>
                 <span className={styles.word}>
                     <Heading2>Code</Heading2>
@@ -26,7 +26,7 @@ const RotatingText = () => {
                 </span>
             </div>
             <Heading2>with us</Heading2>
-        </h2>
+        </div>
     )
 }
 

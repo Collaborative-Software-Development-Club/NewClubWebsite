@@ -12,14 +12,16 @@ const DISCORD_LINK = 'https://discord.gg/tt4ds3MF'
 const MORE_INFO_LINK = '#info'
 
 const HeroSection = () => {
-    const {ics, google} = useMeetingCalendarLink()
+    const { ics, google } = useMeetingCalendarLink()
     return (
         <>
-            <Section>
+            <Section fullScreen>
                 <FlexContainer justifyContent="center" direction="column" fill>
                     <Heading1>Collaborative Software Development Club @OSU</Heading1>
-                    <FlexContainer direction='row' alignItems='start'>
-                        <Link href={ics}><Subtitle>Enarson 348 Wednesdays 7pm</Subtitle></Link>
+                    <FlexContainer direction="row" alignItems="start">
+                        <Link href={ics}>
+                            <Subtitle>Enarson 348 Wednesdays 7pm</Subtitle>
+                        </Link>
                     </FlexContainer>
                     <FlexContainer direction={'row'} alignItems="stretch" convertToVerticalOnMobile>
                         <JoinDiscordWrapper>
