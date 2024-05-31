@@ -1,15 +1,15 @@
-import Button from '@/ui_library/components/Button'
-import FlexContainer from '@/ui_library/components/FlexContainer'
-import Section from '@/ui_library/components/Section'
-import RotatingText from './RotatingText'
-import Padding from '@/ui_library/components/Padding'
-import TextBulletedList from '@/ui_library/components/TextBulletedList'
+import Button from '@/ui_library/components/Button';
+import FlexContainer from '@/ui_library/components/FlexContainer';
+import Section from '@/ui_library/components/Section';
+import RotatingText from './RotatingText';
+import Padding from '@/ui_library/components/Padding';
+import TextBulletedList from '@/ui_library/components/TextBulletedList';
 
 const MoreInfoSection = () => {
     return (
         <>
             <Section id="info">
-                <Padding top="none" bottom="sm" right="lg" left="lg">
+                <Padding top="md" bottom="sm" right="lg" left="lg">
                     <FlexContainer direction="column" alignItems="start">
                         <RotatingText />
                         <TextBulletedList bullets={BULLET_POINTS} />
@@ -23,12 +23,12 @@ const MoreInfoSection = () => {
                 </Padding>
             </Section>
         </>
-    )
-}
+    );
+};
 
-export default MoreInfoSection
+export default MoreInfoSection;
 
-const PROJECTS_LINK = '#projects'
+const PROJECTS_LINK = '#projects';
 
 const BULLET_POINTS = [
     'We are a student org focused on working in collaborative software development projects.',
@@ -36,6 +36,6 @@ const BULLET_POINTS = [
     'Learn skills and technologies valued by recruiters, like Unity, JavaScript, ReactJS, NextJS, and more.',
     'Work in collaborative projects through GitHub and increase commits.',
     'We accept members from all majors and skill levels.',
-]
-const OFFICERS_CTA = 'Meet our Officers ->'
-const PROJECTS_CTA = 'See our Projects ->'
+];
+const OFFICERS_CTA = 'Meet our Officers ->';
+const PROJECTS_CTA = 'See our Projects ->';
