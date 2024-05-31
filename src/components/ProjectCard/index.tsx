@@ -19,7 +19,7 @@ const ProjectCard = (props: ProjectCardProps) => {
             <FlexContainer justifyContent="space-between" direction="column" fill>
                 <FlexContainer direction="column">
                     <Heading3>{props.title}</Heading3>
-                    <FlexContainer direction="row" wrap>
+                    <FlexContainer direction="row" wrap gap="10px">
                         {props.tags.map((tag) => (
                             <div className={styles.tag}>{tag}</div>
                         ))}
