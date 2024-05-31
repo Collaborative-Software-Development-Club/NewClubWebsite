@@ -1,19 +1,28 @@
 import ProjectCard, { ProjectCardProps } from '@/components/ProjectCard'
 import FlexContainer from '@/ui_components/FlexContainer'
 import Heading3 from '@/ui_components/Heading3'
+import Padding from '@/ui_components/Padding'
 import Section from '@/ui_components/Section'
 import React from 'react'
 
 const Projects = () => {
     return (
         <Section id="projects">
+            {/* <Padding left="lg" top="md" bottom="lg" right="none"> */}
             <FlexContainer direction="column">
-                <Heading3>{PROJECTS_HEADING}</Heading3>
-                <FlexContainer direction="row" alignItems="stretch" fill scroll>
-                    <ProjectCard {...BLOG_PROJECT} />
-                    <ProjectCard {...TOWER_CONTROL_PROJECT} />
+                <Padding vertical="sm" horizontal="lg">
+                    <Heading3>{PROJECTS_HEADING}</Heading3>
+                </Padding>
+                <FlexContainer direction="column" scroll>
+                    <Padding vertical="none" horizontal="lg">
+                        <FlexContainer direction="row" alignItems="stretch" fill>
+                            <ProjectCard {...BLOG_PROJECT} />
+                            <ProjectCard {...TOWER_CONTROL_PROJECT} />
+                        </FlexContainer>
+                    </Padding>
                 </FlexContainer>
             </FlexContainer>
+            {/* </Padding> */}
         </Section>
     )
 }

@@ -1,4 +1,4 @@
-import Heading2 from '../Heading2'
+import Heading2 from '@/ui_components/Heading2'
 import styles from './RotatingText.module.css'
 
 /*

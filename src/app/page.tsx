@@ -10,11 +10,11 @@ export default function Home() {
     return (
         <main className={styles.main}>
             <Navigation />
-            <Content>
-                <HeroSection />
-                <MoreInfoSection />
-                <ProjectsSection />
-            </Content>
+            {/* <Content> */}
+            <HeroSection />
+            <MoreInfoSection />
+            <ProjectsSection />
+            {/* </Content> */}
             <WebsiteFooter />
         </main>
     )

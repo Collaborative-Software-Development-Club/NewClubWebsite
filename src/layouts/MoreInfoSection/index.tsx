@@ -1,26 +1,26 @@
 import Button from '@/ui_components/Button'
-import Heading2 from '@/ui_components/Heading2'
-import Heading3 from '@/ui_components/Heading3'
 import FlexContainer from '@/ui_components/FlexContainer'
-import ProjectCard, { ProjectCardProps } from '@/components/ProjectCard'
 import Section from '@/ui_components/Section'
 import TextBulletedList from '@/ui_components/TextBulletedList'
-import RotatingText from '@/ui_components/RotatingText'
+import RotatingText from './RotatingText'
+import Padding from '@/ui_components/Padding'
 
 const MoreInfoSection = () => {
     return (
         <>
             <Section id="info">
-                <FlexContainer direction="column" alignItems="start">
-                    <RotatingText />
-                    <TextBulletedList bullets={BULLET_POINTS} />
-                    <Button variant="secondary" href="">
-                        {OFFICERS_CTA}
-                    </Button>
-                    {/* <Button variant={'terciary'} href={PROJECTS_LINK}>
-                        {PROJECTS_CTA}
-                    </Button> */}
-                </FlexContainer>
+                <Padding top="none" bottom="sm" right="lg" left="lg">
+                    <FlexContainer direction="column" alignItems="start">
+                        <RotatingText />
+                        <TextBulletedList bullets={BULLET_POINTS} />
+                        <Button variant="secondary" href="">
+                            {OFFICERS_CTA}
+                        </Button>
+                        {/* <Button variant={'terciary'} href={PROJECTS_LINK}>
+                            {PROJECTS_CTA}
+                        </Button> */}
+                    </FlexContainer>
+                </Padding>
             </Section>
         </>
     )

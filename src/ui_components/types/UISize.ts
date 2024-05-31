@@ -1,1 +1,1 @@
-type UISize = 'sm' | 'md' | 'lg'
+type UISize = 'sm' | 'md' | 'lg' | 'none'
