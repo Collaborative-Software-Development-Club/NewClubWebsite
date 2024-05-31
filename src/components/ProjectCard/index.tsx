@@ -1,9 +1,9 @@
-import FlexContainer from '@/ui_components/FlexContainer'
-import Button from '../../ui_components/Button'
-import Card from '../../ui_components/Card'
-import Paragraph from '../../ui_components/Paragraph'
+import FlexContainer from '@/ui_library/components/FlexContainer'
+import Button from '../../ui_library/components/Button'
+import Card from '../../ui_library/components/Card'
+import Paragraph from '../../ui_library/components/Paragraph'
 import styles from './ProjectCard.module.css'
-import Heading3 from '@/ui_components/Heading3'
+import Heading3 from '@/ui_library/components/Heading3'
 
 export interface ProjectCardProps {
     title: string

@@ -1,5 +1,5 @@
 import styles from './Paragraph.module.css'
-import TextElement from '@/ui_components/TextElement'
+import TextElement from '../TextElement'
 
 console.log(styles.paragraph)
 

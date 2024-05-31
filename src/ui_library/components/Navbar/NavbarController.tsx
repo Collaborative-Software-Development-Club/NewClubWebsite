@@ -4,7 +4,7 @@ import FlexContainer from '../FlexContainer'
 import styles from './Navbar.module.css'
 import { useEffect, useState } from 'react'
 import HamburgerMenu from './HamburgerMenu'
-import useIsMobileScreen from '../hooks/useIsMobileScreen'
+import useIsMobileScreen from '../../hooks/useIsMobileScreen'
 
 const NavbarController = ({ children }: OnlyChildren) => {
     const [isOpen, setIsOpen] = useState(false)

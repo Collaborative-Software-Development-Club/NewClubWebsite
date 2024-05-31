@@ -1,7 +1,7 @@
 import Image from 'next/image'
-import Button from '../../ui_components/Button'
-import Footer from '@/ui_components/Footer'
-import Padding from '@/ui_components/Padding'
+import Button from '@/ui_library/components/Button'
+import Footer from '@/ui_library/components/Footer'
+import Padding from '@/ui_library/components/Padding'
 
 const DISCORD_LINK = 'https://discord.gg/tt4ds3MF'
 const LINKEDIN_LINK = 'https://www.linkedin.com/groups/14285824/'

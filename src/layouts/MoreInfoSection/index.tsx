@@ -1,9 +1,9 @@
-import Button from '@/ui_components/Button'
-import FlexContainer from '@/ui_components/FlexContainer'
-import Section from '@/ui_components/Section'
-import TextBulletedList from '@/ui_components/TextBulletedList'
+import Button from '@/ui_library/components/Button'
+import FlexContainer from '@/ui_library/components/FlexContainer'
+import Section from '@/ui_library/components/Section'
 import RotatingText from './RotatingText'
-import Padding from '@/ui_components/Padding'
+import Padding from '@/ui_library/components/Padding'
+import TextBulletedList from '@/ui_library/components/TextBulletedList'
 
 const MoreInfoSection = () => {
     return (

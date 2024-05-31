@@ -1,8 +1,8 @@
 import ProjectCard, { ProjectCardProps } from '@/components/ProjectCard'
-import FlexContainer from '@/ui_components/FlexContainer'
-import Heading3 from '@/ui_components/Heading3'
-import Padding from '@/ui_components/Padding'
-import Section from '@/ui_components/Section'
+import FlexContainer from '@/ui_library/components/FlexContainer'
+import Heading3 from '@/ui_library/components/Heading3'
+import Padding from '@/ui_library/components/Padding'
+import Section from '@/ui_library/components/Section'
 import React from 'react'
 
 const Projects = () => {

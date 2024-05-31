@@ -1,5 +1,4 @@
 import styles from './page.module.css'
-import Content from '@/components/Content'
 import HeroSection from '@/layouts/HeroSection'
 import MoreInfoSection from '@/layouts/MoreInfoSection'
 import Navigation from '@/components/Navigation'

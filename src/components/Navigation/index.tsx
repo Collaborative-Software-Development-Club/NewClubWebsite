@@ -1,5 +1,5 @@
-import Button from '../../ui_components/Button'
-import Navbar from '../../ui_components/Navbar'
+import Button from '@/ui_library/components/Button'
+import Navbar from '@/ui_library/components/Navbar'
 
 const LOGO_URL = '/logo.svg'
 
