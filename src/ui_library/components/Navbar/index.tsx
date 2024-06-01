@@ -1,11 +1,11 @@
-import Image from 'next/image'
-import FlexContainer from '../FlexContainer'
-import styles from './Navbar.module.css'
-import NavbarController from './NavbarController'
-import Padding from '../Padding'
+import Image from 'next/image';
+import FlexContainer from '../FlexContainer';
+import styles from './Navbar.module.css';
+import NavbarController from './NavbarController';
+import Padding from '../Padding';
 
 interface NavbarProps extends OnlyChildren {
-    logoURL?: string
+    logoURL?: string;
 }
 
 const Navbar = (props: NavbarProps) => {
@@ -20,7 +20,7 @@ const Navbar = (props: NavbarProps) => {
                 </FlexContainer>
             </Padding>
         </nav>
-    )
-}
+    );
+};
 
-export default Navbar
+export default Navbar;

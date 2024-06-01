@@ -28,7 +28,7 @@ const MoreInfoSection = () => {
 
 export default MoreInfoSection;
 
-const PROJECTS_LINK = '#projects';
+//const PROJECTS_LINK = '#projects';
 
 const BULLET_POINTS = [
     'We are a student org focused on working in collaborative software development projects.',
@@ -38,4 +38,4 @@ const BULLET_POINTS = [
     'We accept members from all majors and skill levels.',
 ];
 const OFFICERS_CTA = 'Meet our Officers ->';
-const PROJECTS_CTA = 'See our Projects ->';
+//const PROJECTS_CTA = 'See our Projects ->';

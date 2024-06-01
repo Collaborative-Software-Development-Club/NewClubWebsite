@@ -1,25 +1,25 @@
-import Button from '@/ui_library/components/Button'
-import FlexContainer from '@/ui_library/components/FlexContainer'
-import Heading1 from '@/ui_library/components/Heading1'
-import Section from '@/ui_library/components/Section'
-import Subtitle from '@/ui_library/components/Subtitle'
-import BackgroundImage from '@/components/BackgroundImage'
-import JoinDiscordWrapper from './JoinDiscordWrapper'
-import useMeetingCalendarLink from '@/hooks/useMeetingCalendarLink'
-import Link from 'next/link'
-import Padding from '@/ui_library/components/Padding'
+import Button from '@/ui_library/components/Button';
+import FlexContainer from '@/ui_library/components/FlexContainer';
+import Heading1 from '@/ui_library/components/Heading1';
+import Section from '@/ui_library/components/Section';
+import Subtitle from '@/ui_library/components/Subtitle';
+import BackgroundImage from '@/components/BackgroundImage';
+import JoinDiscordWrapper from './JoinDiscordWrapper';
+import useMeetingCalendarLink from '@/hooks/useMeetingCalendarLink';
+import Link from 'next/link';
+import Padding from '@/ui_library/components/Padding';
 
-const DISCORD_LINK = 'https://discord.gg/tt4ds3MF'
-const MORE_INFO_LINK = '#info'
+const DISCORD_LINK = 'https://discord.gg/tt4ds3MF';
+const MORE_INFO_LINK = '#info';
 
 const HeroSection = () => {
-    const { ics, google } = useMeetingCalendarLink()
+    const { ics, google } = useMeetingCalendarLink();
     return (
         <>
             <Section fullScreen>
                 <FlexContainer justifyContent="center" direction="column" fill>
                     <Padding horizontal="lg" vertical="none">
-                        <FlexContainer gap="2rem" direction="column">
+                        <FlexContainer gap="md" direction="column">
                             <Heading1>Collaborative Software Development Club @OSU</Heading1>
                             <FlexContainer direction="row" alignItems="start">
                                 <Link href={ics}>
@@ -46,7 +46,7 @@ const HeroSection = () => {
             </Section>
             <BackgroundImage />
         </>
-    )
-}
+    );
+};
 
-export default HeroSection
+export default HeroSection;

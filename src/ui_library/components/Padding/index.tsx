@@ -1,6 +1,7 @@
 'use client';
 import useUISizeToCSSValue from '@/ui_library/hooks/useUISizeToCSSValue';
 import styles from './Padding.module.css';
+import { CSSProperties } from 'react';
 interface AllPadddingValues extends OnlyChildren {
     top: UISize;
     bottom: UISize;
@@ -11,6 +12,7 @@ interface AllPadddingValues extends OnlyChildren {
 interface TwoPaddingValues extends OnlyChildren {
     vertical: UISize;
     horizontal: UISize;
+    id?: string;
 }
 
 interface SinglePaddingValue extends OnlyChildren {
@@ -26,10 +28,13 @@ export default function Padding(props: SinglePaddingValue): React.JSX.Element;
 export default function Padding(props: OnlyChildren): React.JSX.Element;
 // signature of implementation wont appear as an option
 export default function Padding(props: InternalPaddingProps): React.JSX.Element {
-    const sizeToValueMap = useUISizeToCSSValue({
+    console.log('in padding');
+    console.log(props.id);
+    console.log(props);
+    const sizesToValues = useUISizeToCSSValue({
         sm: {
             desktop: '16px',
-            mobile: '8px,',
+            mobile: '8px',
         },
         md: {
             desktop: '32px',
@@ -44,24 +49,26 @@ export default function Padding(props: InternalPaddingProps): React.JSX.Element 
     let style;
     if (props.top && props.bottom && props.left && props.right) {
         style = {
-            paddingTop: sizeToValueMap.get(props.top),
-            paddingBottom: sizeToValueMap.get(props.bottom),
-            paddingRight: sizeToValueMap.get(props.right),
-            paddingLeft: sizeToValueMap.get(props.left),
+            paddingTop: sizesToValues[props.top],
+            paddingBottom: sizesToValues[props.bottom],
+            paddingRight: sizesToValues[props.right],
+            paddingLeft: sizesToValues[props.left],
         };
     } else if (props.horizontal && props.vertical) {
+        console.log(
+            'applied VH padding as : ',
+            `${sizesToValues[props.vertical]} ${sizesToValues[props.horizontal]}`,
+        );
         style = {
-            padding: `${sizeToValueMap.get(props.vertical)} ${sizeToValueMap.get(
-                props.horizontal,
-            )}`,
+            padding: `${sizesToValues[props.vertical]} ${sizesToValues[props.horizontal]}`,
         };
     } else if (props.all) {
         style = {
-            padding: sizeToValueMap.get(props.all),
+            padding: sizesToValues[props.all],
         };
     } else {
         style = {
-            padding: sizeToValueMap.get('md'),
+            padding: sizesToValues.md,
         };
     }
     return (
