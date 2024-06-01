@@ -1,11 +1,11 @@
 .heading1 {
-    font-size: 96px;
+    font-size: 64px;
     overflow-wrap: break-word;
 }
 
 @media screen and (max-width: 1400px) {
     .heading1 {
-        font-size: 64px;
+        font-size: 48px;
     }
 }
 
