@@ -1,4 +1,3 @@
-'use client'; //DELETE
 import ProjectCard, { ProjectCardProps } from '@/components/ProjectCard';
 import FlexContainer from '@/ui_library/components/FlexContainer';
 import Heading3 from '@/ui_library/components/Heading3';
