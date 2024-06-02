@@ -1,18 +1,19 @@
 .button {
     all: unset;
-    padding: 10px 20px;
+    padding: 8px 16px;
     border-radius: 6px;
     font-weight: 500;
     transition: 0.2s ease-out;
     text-align: center;
     border-width: 3px;
     border-style: solid;
-    font-size: 18px;
+    font-size: 16px;
 }
 
+/*
 @media screen and (max-width: 1400px) {
     .button {
-        font-size: 18px;
+        font-size: 16px;
     }
 }
 
@@ -20,7 +21,7 @@
     .button {
         font-size: 16px;
     }
-}
+}*/
 
 .primary {
     background-color: var(--blue);

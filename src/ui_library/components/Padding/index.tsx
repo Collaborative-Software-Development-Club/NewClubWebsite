@@ -1,7 +1,6 @@
 'use client';
 import useUISizeToCSSValue from '@/ui_library/hooks/useUISizeToCSSValue';
 import styles from './Padding.module.css';
-import { CSSProperties } from 'react';
 interface AllPadddingValues extends OnlyChildren {
     top: UISize;
     bottom: UISize;
@@ -12,7 +11,6 @@ interface AllPadddingValues extends OnlyChildren {
 interface TwoPaddingValues extends OnlyChildren {
     vertical: UISize;
     horizontal: UISize;
-    id?: string;
 }
 
 interface SinglePaddingValue extends OnlyChildren {
@@ -29,7 +27,6 @@ export default function Padding(props: OnlyChildren): React.JSX.Element;
 // signature of implementation wont appear as an option
 export default function Padding(props: InternalPaddingProps): React.JSX.Element {
     console.log('in padding');
-    console.log(props.id);
     console.log(props);
     const sizesToValues = useUISizeToCSSValue({
         sm: {

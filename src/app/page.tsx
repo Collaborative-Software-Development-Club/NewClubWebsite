@@ -1,22 +1,9 @@
-import styles from './page.module.css';
-import HeroSection from '@/layouts/HeroSection';
-import MoreInfoSection from '@/layouts/MoreInfoSection';
-import Navigation from '@/components/Navigation';
-import WebsiteFooter from '@/components/WebsiteFooter';
-import ProjectsSection from '@/layouts/ProjectsSection';
-import ApiTest from '@/components/ApiTest';
+import HomePage from '@/layouts/HomePage';
 
 export default function Home() {
     return (
-        <main className={styles.main}>
-            <Navigation />
-            {/* <Content> */}
-            <HeroSection />
-            <ApiTest />
-            <MoreInfoSection />
-            <ProjectsSection />
-            {/* </Content> */}
-            <WebsiteFooter />
+        <main /* className={styles.main} */>
+            <HomePage />
         </main>
     );
 }
