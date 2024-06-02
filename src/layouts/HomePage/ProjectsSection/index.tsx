@@ -6,16 +6,15 @@ import Section from '@/ui_library/components/Section';
 import React from 'react';
 
 const ProjectsSection = () => {
-    console.log('is in project section');
     return (
         <Section id="projects">
             {/* <Padding left="lg" top="md" bottom="lg" right="none"> */}
             <FlexContainer direction="column">
-                <Padding vertical="sm" horizontal="lg" id="projects heading">
+                <Padding vertical="sm" horizontal="lg">
                     <Heading3>{PROJECTS_HEADING}</Heading3>
                 </Padding>
                 <FlexContainer direction="column" scroll>
-                    <Padding vertical="none" horizontal="lg" id="project cards">
+                    <Padding vertical="none" horizontal="lg">
                         <FlexContainer direction="row" alignItems="stretch" fill>
                             <ProjectCard {...BLOG_PROJECT} />
                             <ProjectCard {...TOWER_CONTROL_PROJECT} />
