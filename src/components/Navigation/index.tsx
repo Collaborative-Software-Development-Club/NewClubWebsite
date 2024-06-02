@@ -1,32 +1,32 @@
-import Button from '@/ui_library/components/Button'
-import Navbar from '@/ui_library/components/Navbar'
+import Button from '@/ui_library/components/Button';
+import Navbar from '@/ui_library/components/Navbar';
 
-const LOGO_URL = '/logo.svg'
+const LOGO_URL = '/logo.svg';
 
 interface NavigationProps {
-    hideCTAButton: boolean
+    hideCTAButton: boolean;
 }
 
 const Navigation = () => {
     return (
         <Navbar logoURL={LOGO_URL}>
-            <Button href="" variant="terciary">
+            <Button href="/" variant="terciary">
                 About us
             </Button>
             <Button href="" variant="terciary">
                 Our Members
             </Button>
-            <Button href="" variant="terciary">
+            <Button href="/#projects" variant="terciary">
                 Projects
             </Button>
-            <Button href="" variant="terciary">
+            {/*             <Button href="" variant="terciary">
                 Arcade
-            </Button>
+            </Button> */}
         </Navbar>
-    )
-}
+    );
+};
 
-export default Navigation
+export default Navigation;
 
 /*
  <nav className={styles.navbar}>
