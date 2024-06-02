@@ -10,6 +10,22 @@
 -   Framework: Next.js
 -   Styling: CSS Modules and some react inline styles (I plan to streamline this later)
 
+### Folder Structure
+
+-   App directory: how nextjs routing works, see nextjs app directory documentation
+    -   Each page in this directory should reference a layout in the layouts folder. There shouldn't be a lot of logic in the page.
+-   Components directory: Shold be used for components that will be used thoughout the app (components specific to this website)
+-   hooks: for custom hooks that are used thought the app
+-   layouts: basically for the ui of different "pages" or other layouts (a broad definition)
+-   ui library: for reusable ui components that will later be exported for future projects (components not specific to this website)
+
+### Componente structure
+
+-   Each component should have its own folder with a capitalized name
+-   Each component folder has an index.tsx file that corresponts to the component
+-   can have a Component.module.css file
+-   Can have other subcomponents that are used only by this component and follow the same component structure
+
 > This project includes a ui_components folder that includes reusable UI components. I plan to export these into a library that can be used for our project throught the semester.
 
 ## How to Contribute
