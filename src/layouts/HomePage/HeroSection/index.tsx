@@ -8,9 +8,7 @@ import JoinDiscordWrapper from './JoinDiscordWrapper';
 import useMeetingCalendarLink from '@/hooks/useMeetingCalendarLink';
 import Link from 'next/link';
 import Padding from '@/ui_library/components/Padding';
-
-const DISCORD_LINK = 'https://discord.gg/tt4ds3MF';
-const MORE_INFO_LINK = '#info';
+import content from '../../../websiteContent';
 
 const HeroSection = () => {
     const { ics, google } = useMeetingCalendarLink();
@@ -32,11 +30,11 @@ const HeroSection = () => {
                                 convertToVerticalOnMobile
                             >
                                 <JoinDiscordWrapper>
-                                    <Button variant={'primary'} href={DISCORD_LINK}>
+                                    <Button variant={'primary'} href={content.DISCORD_LINK}>
                                         Join Our Discord
                                     </Button>
                                 </JoinDiscordWrapper>
-                                <Button variant={'secondary'} href={MORE_INFO_LINK}>
+                                <Button variant={'secondary'} href={content.MORE_INFO_LINK}>
                                     Learn More
                                 </Button>
                             </FlexContainer>

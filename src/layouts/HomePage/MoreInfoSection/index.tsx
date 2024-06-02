@@ -4,6 +4,7 @@ import Section from '@/ui_library/components/Section';
 import RotatingText from './RotatingText';
 import Padding from '@/ui_library/components/Padding';
 import TextBulletedList from '@/ui_library/components/TextBulletedList';
+import content from '@/websiteContent';
 
 const MoreInfoSection = () => {
     return (
@@ -12,9 +13,9 @@ const MoreInfoSection = () => {
                 <Padding top="md" bottom="sm" right="lg" left="lg">
                     <FlexContainer direction="column" alignItems="start">
                         <RotatingText />
-                        <TextBulletedList bullets={BULLET_POINTS} />
+                        <TextBulletedList bullets={content.BULLET_POINTS} />
                         <Button variant="secondary" href="">
-                            {OFFICERS_CTA}
+                            {content.OFFICERS_CTA}
                         </Button>
                         {/* <Button variant={'terciary'} href={PROJECTS_LINK}>
                             {PROJECTS_CTA}
@@ -27,15 +28,3 @@ const MoreInfoSection = () => {
 };
 
 export default MoreInfoSection;
-
-//const PROJECTS_LINK = '#projects';
-
-const BULLET_POINTS = [
-    'We are a student org focused on working in collaborative software development projects.',
-    'Gain technical experience in software development as a way of building your portfolio.',
-    'Learn skills and technologies valued by recruiters, like Unity, JavaScript, ReactJS, NextJS, and more.',
-    'Work in collaborative projects through GitHub and increase commits.',
-    'We accept members from all majors and skill levels.',
-];
-const OFFICERS_CTA = 'Meet our Officers ->';
-//const PROJECTS_CTA = 'See our Projects ->';

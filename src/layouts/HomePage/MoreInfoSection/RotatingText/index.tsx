@@ -1,5 +1,6 @@
 import Heading2 from '@/ui_library/components/Heading2';
 import styles from './RotatingText.module.css';
+import content from '@/websiteContent';
 
 /*
 I tried to make this a reusable component, 
@@ -12,18 +13,13 @@ const RotatingText = () => {
     return (
         <div className={styles.outer}>
             <div className={styles.inner}>
-                <span className={styles.word}>
-                    <Heading2>Code</Heading2>
-                </span>
-                <span className={styles.word}>
-                    <Heading2>Collab</Heading2>
-                </span>
-                <span className={styles.word}>
-                    <Heading2>Learn</Heading2>
-                </span>
-                <span className={styles.word}>
-                    <Heading2>Develop</Heading2>
-                </span>
+                {content.ROTATING_TEXT.map((index) => {
+                    return (
+                        <span className={styles.word} key={index}>
+                            <Heading2>{index}</Heading2>
+                        </span>
+                    );
+                })}
             </div>
             <Heading2>with us</Heading2>
         </div>
