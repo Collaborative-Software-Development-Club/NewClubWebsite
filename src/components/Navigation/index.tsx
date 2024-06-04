@@ -3,17 +3,13 @@ import Navbar from '@/ui_library/components/Navbar';
 
 const LOGO_URL = '/logo.svg';
 
-interface NavigationProps {
-    hideCTAButton: boolean;
-}
-
 const Navigation = () => {
     return (
         <Navbar logoURL={LOGO_URL}>
             <Button href="/" variant="terciary">
                 About us
             </Button>
-            <Button href="" variant="terciary">
+            <Button href="/members" variant="terciary">
                 Our Members
             </Button>
             <Button href="/#projects" variant="terciary">

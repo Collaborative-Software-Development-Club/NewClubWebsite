@@ -14,6 +14,7 @@ const HeroSection = () => {
     const { ics, google } = useMeetingCalendarLink();
     return (
         <>
+            <BackgroundImage />
             <Section fullScreen>
                 <FlexContainer justifyContent="center" direction="column" fill>
                     <Padding horizontal="lg" vertical="none">
@@ -42,7 +43,6 @@ const HeroSection = () => {
                     </Padding>
                 </FlexContainer>
             </Section>
-            <BackgroundImage />
         </>
     );
 };

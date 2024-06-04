@@ -14,7 +14,7 @@
 }
 
 .wrap {
-    flex-wrap: wrap
+    flex-wrap: wrap;
 }
 
 .row {
@@ -23,17 +23,16 @@
 }
 
 .scroll {
-    overflow-x: scroll
+    overflow-x: scroll;
 }
 
-@media (max-width: 600px) {
-    .convertToVerticalOnMobile{
+@media (max-width: 700px) {
+    .convertToVerticalOnMobile {
         flex-direction: column;
         overflow-x: visible;
         overflow-y: visible;
     }
 }
-
 
 .column {
     flex-direction: column;

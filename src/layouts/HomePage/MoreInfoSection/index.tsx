@@ -14,7 +14,7 @@ const MoreInfoSection = () => {
                     <FlexContainer direction="column" alignItems="start">
                         <RotatingText />
                         <TextBulletedList bullets={content.BULLET_POINTS} />
-                        <Button variant="secondary" href="">
+                        <Button variant="secondary" href="/members">
                             {content.OFFICERS_CTA}
                         </Button>
                         {/* <Button variant={'terciary'} href={PROJECTS_LINK}>

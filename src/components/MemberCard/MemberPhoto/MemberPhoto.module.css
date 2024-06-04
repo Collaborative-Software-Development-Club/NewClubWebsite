@@ -1,0 +1,13 @@
+.memberPhoto {
+    position: relative;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    /* height: 100%; */
+}
+
+.imageContainer {
+    /*     display: flex;
+    align-items: stretch;
+    justify-content: center; */
+    width: 100%;
+}

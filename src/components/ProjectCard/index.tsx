@@ -4,6 +4,7 @@ import Card from '../../ui_library/components/Card';
 import Paragraph from '../../ui_library/components/Paragraph';
 import styles from './ProjectCard.module.css';
 import Heading3 from '@/ui_library/components/Heading3';
+import Padding from '@/ui_library/components/Padding';
 
 export interface ProjectCardProps {
     title: string;
@@ -16,23 +17,25 @@ export interface ProjectCardProps {
 const ProjectCard = (props: ProjectCardProps) => {
     console.log('in project card');
     return (
-        <Card>
-            <FlexContainer justifyContent="space-between" direction="column" fill>
-                <FlexContainer direction="column" gap="sm">
-                    <Heading3>{props.title}</Heading3>
-                    <FlexContainer direction="row" wrap gap="sm">
-                        {props.tags.map((tag) => (
-                            <div className={styles.tag} key={tag}>
-                                {tag}
-                            </div>
-                        ))}
+        <Card width="380px">
+            <Padding>
+                <FlexContainer justifyContent="space-between" direction="column" fill>
+                    <FlexContainer direction="column" gap="sm">
+                        <Heading3>{props.title}</Heading3>
+                        <FlexContainer direction="row" wrap gap="sm">
+                            {props.tags.map((tag) => (
+                                <div className={styles.tag} key={tag}>
+                                    {tag}
+                                </div>
+                            ))}
+                        </FlexContainer>
+                        <Paragraph>{props.description}</Paragraph>
                     </FlexContainer>
-                    <Paragraph>{props.description}</Paragraph>
+                    <Button href={props.url} variant="primary">
+                        Check it out!
+                    </Button>
                 </FlexContainer>
-                <Button href={props.url} variant="primary" theme="light">
-                    Check it out!
-                </Button>
-            </FlexContainer>
+            </Padding>
         </Card>
     );
 };

@@ -3,14 +3,13 @@
     border-radius: 20px;
     /* background: linear-gradient(45deg, var(--card-background-start),var(--card-background-end)); */
     background-color: var(--card-background);
-    /* filter: var(--card-shadow); */
+    filter: var(--card-shadow);
     /* color: var(--cream); */
-    color: var(--black);
-    min-width: 250px;
-    width: 380px;
+    /* color: var(--black); */
     display: flex;
     flex-direction: column;
-
+    width: 80vw;
+    flex-shrink: 0;
     /* 
     border: solid 2px transparent;
     border-radius: 20px;
@@ -21,6 +20,8 @@
     */
 }
 
+/*
 .card > * {
-    flex-grow: 1
+    flex-grow: 1;
 }
+*/

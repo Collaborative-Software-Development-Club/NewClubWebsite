@@ -19,9 +19,11 @@
     --card-stroke-end: #ff6d5f33;
     --card-background-end: #ffffff1a;
     --card-background-start: #ffffff66;
-    --card-background: #dbd7c5;
-    --card-shadow-color: #de362666;
-    --card-shadow: drop-shadow(0px 10px 20px var(--card-shadow-color));
+    /* --card-background: #dbd7c5; */
+    --card-background: #191924;
+    /* --card-shadow-color: #de362666; */
+    --card-shadow-color: #e1d9d866;
+    --card-shadow: drop-shadow(0px 0px 10px var(--card-shadow-color));
 
     --blue-shadow: #0e7c7b80;
     --cream-shadow: #f7f3e380;

@@ -1,8 +1,6 @@
-import styles from './Paragraph.module.css'
-import TextElement from '../TextElement'
+import styles from './Paragraph.module.css';
+import TextElement from '../TextElement';
 
-console.log(styles.paragraph)
+const Paragraph = TextElement('p', styles.paragraph);
 
-const Paragraph = TextElement('p', styles.paragraph)
-
-export default Paragraph
+export default Paragraph;

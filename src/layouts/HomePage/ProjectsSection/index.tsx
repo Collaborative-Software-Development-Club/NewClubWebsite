@@ -10,18 +10,20 @@ const ProjectsSection = () => {
     return (
         <Section id="projects">
             {/* <Padding left="lg" top="md" bottom="lg" right="none"> */}
-            <FlexContainer direction="column">
+            <FlexContainer direction="column" gap="none">
                 <Padding vertical="sm" horizontal="lg">
                     <Heading3>{content.PROJECTS_HEADING}</Heading3>
                 </Padding>
-                <FlexContainer direction="column" scroll>
-                    <Padding vertical="none" horizontal="lg">
-                        <FlexContainer direction="row" alignItems="stretch" fill>
-                            {content.PROJECTS.map((project) => {
-                                return <ProjectCard {...project} />;
-                            })}
-                        </FlexContainer>
-                    </Padding>
+                <FlexContainer direction="column" fill>
+                    <FlexContainer direction="row" fill scroll>
+                        <Padding vertical="lg" horizontal="lg">
+                            <FlexContainer direction="row" alignItems="stretch">
+                                {content.PROJECTS.map((project) => {
+                                    return <ProjectCard {...project} />;
+                                })}
+                            </FlexContainer>
+                        </Padding>
+                    </FlexContainer>
                 </FlexContainer>
             </FlexContainer>
             {/* </Padding> */}

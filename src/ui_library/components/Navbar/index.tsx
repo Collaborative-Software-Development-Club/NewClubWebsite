@@ -11,7 +11,7 @@ interface NavbarProps extends OnlyChildren {
 const Navbar = (props: NavbarProps) => {
     return (
         <nav className={styles.navbar}>
-            <Padding all="sm">
+            <Padding all="md">
                 <FlexContainer direction="row" justifyContent="space-between" fill>
                     {props.logoURL && (
                         <Image src={props.logoURL} alt="logo" width={100} height={40} />
