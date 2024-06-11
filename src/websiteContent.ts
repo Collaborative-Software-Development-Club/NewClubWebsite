@@ -51,6 +51,12 @@ const content = {
             photo: '/lorenzo.jpeg',
             position: 'Treasurer',
         },
+        {
+            name: 'Trevor Kosht',
+            photo: '/trevor.jpg',
+            position: 'Seretary',
+            description: 'No description yet',
+        },
     ],
 };
 
