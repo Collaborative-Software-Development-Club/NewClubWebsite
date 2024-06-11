@@ -18,16 +18,24 @@ const MemberCard = (props: MemberCardProps) => {
     const shortenedDescription =
         props.description.substring(0, NUMBER_OF_CHARACTERS_IN_DESCRIPTION) + '...';
     return (
-        <Card width="300px">
+        <Card width="340px">
             <Padding all="md">
-                <FlexContainer direction="column" alignItems="center" gap="md">
-                    <MemberPhoto src={props.photo} />
-                    <FlexContainer direction="column" gap="sm" alignItems="start">
-                        <Heading3>{props.name}</Heading3>
-                        <Paragraph>{`Position: ${props.position}`}</Paragraph>
-                        {/* <Paragraph>{shortenedDescription}</Paragraph> */}
-                        <Button href={`/members/${props.name}`} variant="terciary">
-                            Read more
+                <FlexContainer direction="column" alignItems="stretch" gap="md">
+                    <FlexContainer direction="column" alignItems="center">
+                        <MemberPhoto src={props.photo} />
+                    </FlexContainer>
+                    <FlexContainer
+                        direction="column"
+                        justifyContent="space-between"
+                        alignItems="stretch"
+                    >
+                        <FlexContainer direction="column" gap="sm" alignItems="start">
+                            <Heading3>{props.name}</Heading3>
+                            <Paragraph>{`Position: ${props.position}`}</Paragraph>
+                            {/* <Paragraph>{shortenedDescription}</Paragraph> */}
+                        </FlexContainer>
+                        <Button href={`/members/${props.name}`} variant="primary">
+                            More
                         </Button>
                     </FlexContainer>
                 </FlexContainer>
