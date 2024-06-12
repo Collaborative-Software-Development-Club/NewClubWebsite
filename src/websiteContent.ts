@@ -1,5 +1,5 @@
 const content = {
-    DISCORD_LINK: 'https://discord.gg/tt4ds3MF',
+    DISCORD_LINK: 'https://discord.gg/ZU8fCvceQJ',
     MORE_INFO_LINK: '#info',
     BULLET_POINTS: [
         'We are a student org focused on working in collaborative software development projects.',
