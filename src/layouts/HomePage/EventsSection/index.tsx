@@ -1,5 +1,6 @@
 import EventCard from '@/components/EventCard';
 import FlexContainer from '@/ui_library/components/FlexContainer';
+import Heading2 from '@/ui_library/components/Heading2';
 import Heading3 from '@/ui_library/components/Heading3';
 import Padding from '@/ui_library/components/Padding';
 import Section from '@/ui_library/components/Section';
@@ -10,7 +11,7 @@ const EventsSection = () => {
         <Section id="events">
             <FlexContainer direction="column" gap="none">
                 <Padding top="md" bottom="none" right="lg" left="lg">
-                    <Heading3>{content.EVENTS_HEADING}</Heading3>
+                    <Heading2>{content.EVENTS_HEADING}</Heading2>
                 </Padding>
                 <FlexContainer direction="column" fill>
                     <FlexContainer direction="row" fill scroll>

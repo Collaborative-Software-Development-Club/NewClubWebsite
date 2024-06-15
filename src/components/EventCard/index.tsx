@@ -1,10 +1,9 @@
 import FlexContainer from '@/ui_library/components/FlexContainer';
-import Button from '../../ui_library/components/Button';
 import Card from '../../ui_library/components/Card';
 import Paragraph from '../../ui_library/components/Paragraph';
-import styles from './ProjectCard.module.css';
 import Heading3 from '@/ui_library/components/Heading3';
 import Padding from '@/ui_library/components/Padding';
+import formatDate from '@/helpers/formatDate';
 
 export interface EventCardProps {
     title: string;
@@ -12,9 +11,6 @@ export interface EventCardProps {
     location: string;
     date: string;
 }
-const formatDate = (dateString: string) => {
-    return new Date(dateString).toDateString();
-};
 
 const EventCard = (props: EventCardProps) => {
     const dateAsString = formatDate(props.date);

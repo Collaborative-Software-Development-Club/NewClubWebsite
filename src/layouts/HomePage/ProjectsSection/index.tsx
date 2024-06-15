@@ -5,6 +5,7 @@ import Padding from '@/ui_library/components/Padding';
 import Section from '@/ui_library/components/Section';
 import React from 'react';
 import content from '@/websiteContent';
+import Heading2 from '@/ui_library/components/Heading2';
 
 const ProjectsSection = () => {
     return (
@@ -12,7 +13,7 @@ const ProjectsSection = () => {
             {/* <Padding left="lg" top="md" bottom="lg" right="none"> */}
             <FlexContainer direction="column" gap="none">
                 <Padding top="md" bottom="none" right="lg" left="lg">
-                    <Heading3>{content.PROJECTS_HEADING}</Heading3>
+                    <Heading2>{content.PROJECTS_HEADING}</Heading2>
                 </Padding>
                 <FlexContainer direction="column" fill>
                     <FlexContainer direction="row" fill scroll>

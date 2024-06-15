@@ -1,6 +1,7 @@
 .heading3 {
     font-size: 30px;
     overflow-wrap: break-word;
+    color: var(--red);
 }
 
 @media screen and (max-width: 1400px) {
