@@ -57,6 +57,12 @@ const content = {
             position: 'Seretary',
             description: 'No description yet',
         },
+        {
+            name: 'Megumi Ito',
+            photo: '/megumi.jpg',
+            position: 'Social Media Manager',
+            description: 'No description yet',
+        },
     ],
 };
 
