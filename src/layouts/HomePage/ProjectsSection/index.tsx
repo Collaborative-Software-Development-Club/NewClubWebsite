@@ -11,7 +11,7 @@ const ProjectsSection = () => {
         <Section id="projects">
             {/* <Padding left="lg" top="md" bottom="lg" right="none"> */}
             <FlexContainer direction="column" gap="none">
-                <Padding vertical="sm" horizontal="lg">
+                <Padding top="md" bottom="none" right="lg" left="lg">
                     <Heading3>{content.PROJECTS_HEADING}</Heading3>
                 </Padding>
                 <FlexContainer direction="column" fill>
