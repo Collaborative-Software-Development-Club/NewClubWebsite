@@ -1,4 +1,5 @@
-import MemberPage from '@/layouts/MemberPage';
+import MemberPage from '@/layouts/MemberInfo';
+import MembersPage from '@/layouts/MembersPage';
 import Paragraph from '@/ui_library/components/Paragraph';
 import content from '@/websiteContent';
 

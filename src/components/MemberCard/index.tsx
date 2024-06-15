@@ -15,31 +15,32 @@ interface MemberCardProps {
 
 const NUMBER_OF_CHARACTERS_IN_DESCRIPTION = 300;
 const MemberCard = (props: MemberCardProps) => {
-    const shortenedDescription =
-        props.description.substring(0, NUMBER_OF_CHARACTERS_IN_DESCRIPTION) + '...';
+    //const shortenedDescription = props.description.substring(0, NUMBER_OF_CHARACTERS_IN_DESCRIPTION) + '...';
     return (
-        <Card width="340px">
-            <Padding all="md">
-                <FlexContainer direction="column" alignItems="stretch" gap="md">
+        <Card width="300px">
+            <FlexContainer direction="column" alignItems="stretch" gap="md">
+                <Padding vertical="none" horizontal="none">
                     <FlexContainer direction="column" alignItems="center">
                         <MemberPhoto src={props.photo} />
                     </FlexContainer>
-                    <FlexContainer
-                        direction="column"
-                        justifyContent="space-between"
-                        alignItems="stretch"
-                    >
-                        <FlexContainer direction="column" gap="sm" alignItems="start">
-                            <Heading3>{props.name}</Heading3>
-                            <Paragraph>{`Position: ${props.position}`}</Paragraph>
-                            {/* <Paragraph>{shortenedDescription}</Paragraph> */}
-                        </FlexContainer>
-                        <Button href={`/members/${props.name}`} variant="primary">
-                            More
-                        </Button>
+                </Padding>
+                <FlexContainer
+                    direction="column"
+                    justifyContent="space-between"
+                    alignItems="stretch"
+                >
+                    <FlexContainer direction="column" gap="sm" alignItems="start">
+                        <Padding vertical="none" horizontal="sm">
+                            <Button href={`/members/${props.name}`} variant="terciary">
+                                {props.name}
+                            </Button>
+                        </Padding>
+                        <Padding top="none" bottom="md" right="md" left="md">
+                            <Paragraph>{`${props.position}`}</Paragraph>
+                        </Padding>
                     </FlexContainer>
                 </FlexContainer>
-            </Padding>
+            </FlexContainer>
         </Card>
     );
 };

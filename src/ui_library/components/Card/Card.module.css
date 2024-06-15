@@ -2,7 +2,7 @@
     backdrop-filter: blur(10px);
     border-radius: 20px;
     /* background: linear-gradient(45deg, var(--card-background-start),var(--card-background-end)); */
-    background-color: var(--card-background);
+    /* background-color: var(--card-background); */
     filter: var(--card-shadow);
     /* color: var(--cream); */
     /* color: var(--black); */
@@ -10,6 +10,8 @@
     flex-direction: column;
     width: 80vw;
     flex-shrink: 0;
+    overflow: hidden;
+    transition: 0.1s ease-out;
     /* 
     border: solid 2px transparent;
     border-radius: 20px;
@@ -18,6 +20,11 @@
     background-origin: border-box;
     background-clip: content-box, border-box;
     */
+}
+
+.card:hover {
+    filter: var(--card-shadow-hover);
+    transform: scale(1.05);
 }
 
 /*
