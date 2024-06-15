@@ -5,13 +5,16 @@ import Section from '@/ui_library/components/Section';
 import Subtitle from '@/ui_library/components/Subtitle';
 import BackgroundImage from '@/components/BackgroundImage';
 import JoinDiscordWrapper from './JoinDiscordWrapper';
-import useMeetingCalendarLink from '@/hooks/useMeetingCalendarLink';
+import getMeetingCalendarLink from '@/helpers/getMeetingCalendarLink';
 import Link from 'next/link';
 import Padding from '@/ui_library/components/Padding';
 import content from '../../../websiteContent';
 
+const MEETING_HOUR = 18;
+const MEETING_DAY_OF_THE_WEEK = 3;
+
 const HeroSection = () => {
-    const { ics, google } = useMeetingCalendarLink();
+    const { ics, google } = getMeetingCalendarLink(MEETING_DAY_OF_THE_WEEK, MEETING_HOUR);
     return (
         <>
             <BackgroundImage />
@@ -22,7 +25,7 @@ const HeroSection = () => {
                             <Heading1>Collaborative Software Development Club @OSU</Heading1>
                             <FlexContainer direction="row" alignItems="start">
                                 <Link href={ics}>
-                                    <Subtitle>Enarson 348 Wednesdays 7pm</Subtitle>
+                                    <Subtitle>Enarson 348 Wednesdays 6pm</Subtitle>
                                 </Link>
                             </FlexContainer>
                             <FlexContainer
