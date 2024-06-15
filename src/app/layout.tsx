@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Fira_Code } from 'next/font/google';
 import './globals.css';
 import Navigation from '@/components/Navigation';
+import WebsiteFooter from '@/components/WebsiteFooter';
 
 const firaCode = Fira_Code({ subsets: ['latin'] });
 
@@ -20,6 +21,7 @@ export default function RootLayout({
             <body className={firaCode.className}>
                 <Navigation />
                 {children}
+                <WebsiteFooter />
             </body>
         </html>
     );
