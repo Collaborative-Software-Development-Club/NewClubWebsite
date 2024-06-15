@@ -29,6 +29,23 @@ const content = {
             url: '',
         },
     ],
+    EVENTS_HEADING: 'Past Events',
+    EVENTS: [
+        {
+            title: 'WildHack Hackathon',
+            description:
+                'Join us for the exciting Wild Hack hackathon where you can showcase your creativity and coding skills.',
+            location: 'Ohio Union',
+            date: '2024-03-23',
+        },
+        {
+            title: 'Computer Science Social',
+            description:
+                'Join us for the number one social evenet of the semester where you can relax in cozy atmosphere, while chatting chatting with fellow programmers.',
+            location: 'Blackburn Victory Room',
+            date: '2024-04-01T20:00:00.000Z',
+        },
+    ],
     OFFICERS: [
         {
             name: 'Quinton Holmes',
