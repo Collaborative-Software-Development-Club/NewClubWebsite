@@ -15,7 +15,6 @@ export interface ProjectCardProps {
 }
 
 const ProjectCard = (props: ProjectCardProps) => {
-    console.log('in project card');
     return (
         <Card width="380px">
             <Padding>

@@ -18,7 +18,6 @@ interface UISizeMapping {
 
 function useUISizeToCSSValue(mapping: UISizeMapping) {
     const isMobile = useIsMobileScreen();
-    console.log(isMobile);
     return {
         sm: getValueOfProperty(mapping.sm, isMobile),
         md: getValueOfProperty(mapping.md, isMobile),

@@ -26,8 +26,6 @@ export default function Padding(props: SinglePaddingValue): React.JSX.Element;
 export default function Padding(props: OnlyChildren): React.JSX.Element;
 // signature of implementation wont appear as an option
 export default function Padding(props: InternalPaddingProps): React.JSX.Element {
-    console.log('in padding');
-    console.log(props);
     const sizesToValues = useUISizeToCSSValue({
         sm: {
             desktop: '16px',
@@ -52,10 +50,6 @@ export default function Padding(props: InternalPaddingProps): React.JSX.Element 
             paddingLeft: sizesToValues[props.left],
         };
     } else if (props.horizontal && props.vertical) {
-        console.log(
-            'applied VH padding as : ',
-            `${sizesToValues[props.vertical]} ${sizesToValues[props.horizontal]}`,
-        );
         style = {
             padding: `${sizesToValues[props.vertical]} ${sizesToValues[props.horizontal]}`,
         };

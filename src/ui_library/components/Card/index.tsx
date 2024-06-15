@@ -7,7 +7,6 @@ interface CardProps extends OnlyChildren {
 }
 
 const Card = ({ width, children }: CardProps) => {
-    console.log('card width: ' + width);
     return (
         <div className={styles.card} style={width ? { maxWidth: width } : {}}>
             {children}
