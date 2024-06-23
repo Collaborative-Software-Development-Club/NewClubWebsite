@@ -19,7 +19,7 @@ export default async function EventsSection() {
                         <Padding vertical="lg" horizontal="lg">
                             <FlexContainer direction="row" alignItems="stretch">
                                 {eventData.map((event) => {
-                                    return <EventCard {...event} />;
+                                    return <EventCard {...event} key={event.title} />;
                                 })}
                             </FlexContainer>
                         </Padding>

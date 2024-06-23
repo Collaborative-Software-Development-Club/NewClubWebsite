@@ -5,7 +5,6 @@ export default function compareNotionDatesDescending(
     if (dateA instanceof Date && dateB instanceof Date) {
         return compareDatesDescending(dateA, dateB);
     } else if (!(dateA instanceof Date) && !(dateB instanceof Date)) {
-        console.log(dateA, dateB);
         return compareDatesDescending(dateA[0], dateB[0]);
     } else if (dateA instanceof Date && !(dateB instanceof Date)) {
         return compareDatesDescending(dateA, dateB[0]);

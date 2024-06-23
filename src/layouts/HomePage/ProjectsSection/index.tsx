@@ -20,7 +20,7 @@ const ProjectsSection = () => {
                         <Padding vertical="lg" horizontal="lg">
                             <FlexContainer direction="row" alignItems="stretch">
                                 {content.PROJECTS.map((project) => {
-                                    return <ProjectCard {...project} />;
+                                    return <ProjectCard {...project} key={project.title} />;
                                 })}
                             </FlexContainer>
                         </Padding>

@@ -30,6 +30,9 @@ const content = {
         },
     ],
     EVENTS_HEADING: 'Our Events',
+    MEMBERS_HEADING: 'Our Members',
+    OFFICERS_HEADING: 'Officers',
+    /*
     EVENTS: [
         {
             title: 'WildHack Hackathon',
@@ -81,6 +84,7 @@ const content = {
             description: 'No description yet',
         },
     ],
+    */
 };
 
 export default content;

@@ -52,6 +52,22 @@ export class NotionTitleParser extends NotionPropertyParser<string> {
     }
 }
 
+export class NotionImageParser extends NotionPropertyParser<string> {
+    protected propertyField = 'files';
+    protected parseProperty(): string {
+        const url = this.getPropertyFieldObject()[0].file.url;
+        return url;
+    }
+}
+
+export class NotionNumberParser extends NotionPropertyParser<number> {
+    protected propertyField = 'number';
+    protected parseProperty() {
+        const number = this.getPropertyFieldObject();
+        return number;
+    }
+}
+
 export class NotionParsingError extends Error {
     constructor(property: any, description: string) {
         super(`Error parsing property: ${JSON.stringify(property)}\, ${description}`);
