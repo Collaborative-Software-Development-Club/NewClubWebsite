@@ -31,7 +31,14 @@ export default async function MembersPage() {
                 <Padding vertical="sm" horizontal="lg">
                     <FlexContainer direction="row" alignItems="center" wrap justifyContent="start">
                         {membersData.map((member) => {
-                            return <MemberCard {...member} key={member.name} />;
+                            return (
+                                <MemberCard
+                                    name={member.name}
+                                    position={member.position}
+                                    photoUrl={member.photoUrl}
+                                    key={member.name}
+                                />
+                            );
                         })}
                     </FlexContainer>
                 </Padding>

@@ -16,7 +16,7 @@ export default async function getOfficers(): Promise<MemberData[]> {
     return new NotionMembersFetcher(databaseId, notion).get();
 }
 
-class MemberData implements ComparableData {
+export class MemberData implements ComparableData {
     constructor(
         public name: string,
         public description: string,

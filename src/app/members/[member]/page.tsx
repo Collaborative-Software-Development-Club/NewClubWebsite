@@ -1,16 +1,14 @@
-import MemberPage from '@/layouts/MemberInfo';
+import { getMember } from '@/cms';
+import MemberPage from '@/layouts/MemberPage';
 import MembersPage from '@/layouts/MembersPage';
 import Paragraph from '@/ui_library/components/Paragraph';
 import content from '@/websiteContent';
 
-export default function Member({ params }: { params: { member: string } }) {
-    const possibleMembers = content.OFFICERS.filter(
-        (officer) => officer.name === parseName(params.member),
-    );
-    if (possibleMembers.length === 0) {
+export default async function Member({ params }: { params: { member: string } }) {
+    const member = await getMember(parseName(params.member));
+    if (!member) {
         return <Paragraph>Member not found</Paragraph>;
     }
-    const member = possibleMembers[0];
     return (
         <main>
             <MemberPage {...member} />

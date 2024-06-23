@@ -8,14 +8,22 @@ import Button from '@/ui_library/components/Button';
 import { MemberData } from '@/cms';
 
 const NUMBER_OF_CHARACTERS_IN_DESCRIPTION = 300;
-const MemberCard = (props: MemberData) => {
+const MemberCard = ({
+    name,
+    photoUrl,
+    position,
+}: {
+    name: string;
+    position: string;
+    photoUrl: string;
+}) => {
     //const shortenedDescription = props.description.substring(0, NUMBER_OF_CHARACTERS_IN_DESCRIPTION) + '...';
     return (
         <Card width="300px">
             <FlexContainer direction="column" alignItems="stretch" gap="md">
                 <Padding vertical="none" horizontal="none">
                     <FlexContainer direction="column" alignItems="center">
-                        <MemberPhoto src={props.photoUrl} />
+                        <MemberPhoto src={photoUrl} />
                     </FlexContainer>
                 </Padding>
                 <FlexContainer
@@ -25,12 +33,12 @@ const MemberCard = (props: MemberData) => {
                 >
                     <FlexContainer direction="column" gap="sm" alignItems="start">
                         <Padding vertical="none" horizontal="sm">
-                            <Button href={`/members/${props.name}`} variant="terciary">
-                                {props.name}
+                            <Button href={`/members/${name}`} variant="terciary">
+                                {name}
                             </Button>
                         </Padding>
                         <Padding top="none" bottom="md" right="md" left="md">
-                            <Paragraph>{`${props.position}`}</Paragraph>
+                            <Paragraph>{`${position}`}</Paragraph>
                         </Padding>
                     </FlexContainer>
                 </FlexContainer>

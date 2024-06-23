@@ -9,7 +9,7 @@ import Card from '@/ui_library/components/Card';
 interface MemberPageProps {
     name: string;
     description: string;
-    photo: string;
+    photoUrl: string;
     position: string;
 }
 
@@ -19,7 +19,7 @@ const MemberPage = (props: MemberPageProps) => {
         <Padding horizontal="lg" vertical="none">
             <FlexContainer direction="column" gap="lg" justifyContent="center" fill>
                 <FlexContainer direction="row">
-                    <MemberPhoto src={props.photo} />
+                    <MemberPhoto src={props.photoUrl} />
                     <FlexContainer direction="column" justifyContent="center">
                         <Heading1>{props.name}</Heading1>
                         <Paragraph>{`Position: ${props.position}`}</Paragraph>
