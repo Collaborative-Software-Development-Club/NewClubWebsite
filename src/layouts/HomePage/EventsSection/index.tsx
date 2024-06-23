@@ -1,12 +1,13 @@
 import EventCard from '@/components/EventCard';
 import FlexContainer from '@/ui_library/components/FlexContainer';
 import Heading2 from '@/ui_library/components/Heading2';
-import Heading3 from '@/ui_library/components/Heading3';
 import Padding from '@/ui_library/components/Padding';
 import Section from '@/ui_library/components/Section';
 import content from '@/websiteContent';
+import { getEvents } from '@/cms';
 
-const EventsSection = () => {
+export default async function EventsSection() {
+    const eventData = await getEvents();
     return (
         <Section id="events">
             <FlexContainer direction="column" gap="none">
@@ -17,7 +18,7 @@ const EventsSection = () => {
                     <FlexContainer direction="row" fill scroll>
                         <Padding vertical="lg" horizontal="lg">
                             <FlexContainer direction="row" alignItems="stretch">
-                                {content.EVENTS.map((event) => {
+                                {eventData.map((event) => {
                                     return <EventCard {...event} />;
                                 })}
                             </FlexContainer>
@@ -27,6 +28,4 @@ const EventsSection = () => {
             </FlexContainer>
         </Section>
     );
-};
-
-export default EventsSection;
+}

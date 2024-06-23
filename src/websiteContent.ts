@@ -29,7 +29,7 @@ const content = {
             url: '',
         },
     ],
-    EVENTS_HEADING: 'Past Events',
+    EVENTS_HEADING: 'Our Events',
     EVENTS: [
         {
             title: 'WildHack Hackathon',

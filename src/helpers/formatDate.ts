@@ -1,5 +1,4 @@
-const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
+const formatDate = (date: Date) => {
     const formatter = new Intl.DateTimeFormat('en-US', {
         dateStyle: 'long',
         ...(date.getHours() == 0 ? {} : { timeStyle: 'short' }),
