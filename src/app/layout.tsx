@@ -3,6 +3,7 @@ import { Fira_Code } from 'next/font/google';
 import './globals.css';
 import Navigation from '@/components/Navigation';
 import WebsiteFooter from '@/components/WebsiteFooter';
+import FlexContainer from '@/ui_library/components/FlexContainer';
 
 const firaCode = Fira_Code({ subsets: ['latin'] });
 

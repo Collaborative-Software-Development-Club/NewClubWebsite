@@ -1,10 +1,11 @@
 import FlexContainer from '@/ui_library/components/FlexContainer';
 import Paragraph from '@/ui_library/components/Paragraph';
 import Padding from '@/ui_library/components/Padding';
-import MemberPhoto from '@/components/MemberCard/MemberPhoto';
+import MemberPhoto from '@/components/MemberCard/MemberCardPhoto';
 import Heading1 from '@/ui_library/components/Heading1';
 import styles from './MemberInfo.module.css';
 import Card from '@/ui_library/components/Card';
+import MemberPagePhoto from './MemberPagePhoto';
 
 interface MemberPageProps {
     name: string;
@@ -13,19 +14,24 @@ interface MemberPageProps {
     position: string;
 }
 
-const NUMBER_OF_CHARACTERS_IN_DESCRIPTION = 300;
 const MemberPage = (props: MemberPageProps) => {
     return (
         <Padding horizontal="lg" vertical="none">
-            <FlexContainer direction="column" gap="lg" justifyContent="center" fill>
+            <FlexContainer
+                direction="row"
+                gap="lg"
+                justifyContent="start"
+                convertToVerticalOnMobile
+            >
                 <FlexContainer direction="row">
-                    <MemberPhoto src={props.photoUrl} />
-                    <FlexContainer direction="column" justifyContent="center">
-                        <Heading1>{props.name}</Heading1>
-                        <Paragraph>{`Position: ${props.position}`}</Paragraph>
-                    </FlexContainer>
+                    <MemberPagePhoto src={props.photoUrl} />
                 </FlexContainer>
-                <Paragraph>{props.description}</Paragraph>
+
+                <FlexContainer direction="column" justifyContent="center">
+                    <Heading1>{props.name}</Heading1>
+                    <Paragraph>{`Position: ${props.position}`}</Paragraph>
+                    <Paragraph>{props.description}</Paragraph>
+                </FlexContainer>
             </FlexContainer>
         </Padding>
     );

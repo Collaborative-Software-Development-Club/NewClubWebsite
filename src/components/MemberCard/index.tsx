@@ -2,7 +2,7 @@ import Card from '@/ui_library/components/Card';
 import FlexContainer from '@/ui_library/components/FlexContainer';
 import Heading3 from '@/ui_library/components/Heading3';
 import Paragraph from '@/ui_library/components/Paragraph';
-import MemberPhoto from './MemberPhoto';
+import MemberPhoto from './MemberCardPhoto';
 import Padding from '@/ui_library/components/Padding';
 import Button from '@/ui_library/components/Button';
 import { MemberData } from '@/cms';
