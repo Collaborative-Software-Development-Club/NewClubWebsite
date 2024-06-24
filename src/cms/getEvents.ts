@@ -2,8 +2,13 @@ import { Client, isFullDatabase, isFullPageOrDatabase } from '@notionhq/client';
 import { QueryDatabaseResponse } from '@notionhq/client/build/src/api-endpoints';
 import assert from 'assert';
 import NotionDatabaseFetcher, { ComparableData } from './NotionFetcher';
-import { NotionDateParser, NotionRichTextParser, NotionTitleParser } from './notionParsing';
-import compareNotionDatesDescending from './compareNotionDatesDescending';
+import {
+    NotionDateParser,
+    NotionRichTextParser,
+    NotionTitleParser,
+    PropertyValue,
+} from './notionParsing';
+import NotionPropertyParserFactory from './PropertyParserFactory';
 
 export default async function getEvents(): Promise<EventData[]> {
     const notion = new Client({ auth: process.env.NOTION_API_KEY });
@@ -12,25 +17,28 @@ export default async function getEvents(): Promise<EventData[]> {
     return new NotionEventesFetcher(databaseId, notion).get();
 }
 
+const desiredProperties = ['Title', 'Description', 'Location', 'Date'];
+
 class NotionEventesFetcher extends NotionDatabaseFetcher<EventData> {
     constructor(databaseId: string, notionClient: Client) {
         super(databaseId, notionClient);
     }
     protected parsePageProperties(properties: any): EventData {
-        const parsedTitle = new NotionTitleParser(properties[DATABASE_PROPERTIES.title]).parse();
-        this.assertPropertyIsMissing(parsedTitle, DATABASE_PROPERTIES.title);
-        const parsedDescription = new NotionRichTextParser(
-            properties[DATABASE_PROPERTIES.description],
-        ).parse();
-        this.assertPropertyIsMissing(parsedDescription, DATABASE_PROPERTIES.description);
-        const parsedLocation = new NotionRichTextParser(
-            properties[DATABASE_PROPERTIES.location],
-        ).parse();
-        const parsedDate = new NotionDateParser(properties[DATABASE_PROPERTIES.date]).parse();
-        this.assertPropertyIsMissing(parsedDate, DATABASE_PROPERTIES.date);
-        return new EventData(parsedTitle, parsedDescription, parsedDate, parsedLocation);
+        console.log(properties);
+        const parserFactory = new NotionPropertyParserFactory();
+        const parsedProperties = desiredProperties.map((propertyName) => {
+            const parser = parserFactory.getPropertyParser(properties[propertyName]);
+            const parsedProperty = parser.parse();
+            this.assertPropertyIsMissing(parsedProperty, propertyName);
+            return parsedProperty;
+        });
+        return new EventData(
+            parsedProperties[0] as string,
+            parsedProperties[1] as string,
+            parsedProperties[3] as Date | [Date, Date],
+            parsedProperties[2] as string,
+        );
     }
-    //.sort((a, b) => compareNotionDatesDescending(a.date, b.date));
 }
 
 export class EventData implements ComparableData {

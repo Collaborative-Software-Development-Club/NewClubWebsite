@@ -1,7 +1,7 @@
-abstract class NotionPropertyParser<ParsedPropertyType> {
+export abstract class NotionPropertyParser {
     constructor(private property: any) {}
     protected abstract propertyField: string;
-    public parse(): ParsedPropertyType | undefined {
+    public parse(): PropertyValue | undefined {
         if (this.propertyIsMissing()) {
             return undefined;
         }
@@ -18,10 +18,12 @@ abstract class NotionPropertyParser<ParsedPropertyType> {
     private propertyIsMissing() {
         return this.getPropertyFieldObject() == null;
     }
-    protected abstract parseProperty(): ParsedPropertyType;
+    protected abstract parseProperty(): PropertyValue;
 }
 
-export class NotionRichTextParser extends NotionPropertyParser<string> {
+export type PropertyValue = string | number | (Date | [Date, Date]);
+
+export class NotionRichTextParser extends NotionPropertyParser {
     protected propertyField = 'rich_text';
     protected parseProperty(): string {
         return this.getPropertyFieldObject().reduce(
@@ -31,7 +33,7 @@ export class NotionRichTextParser extends NotionPropertyParser<string> {
     }
 }
 
-export class NotionDateParser extends NotionPropertyParser<Date | [Date, Date]> {
+export class NotionDateParser extends NotionPropertyParser {
     protected propertyField = 'date';
     protected parseProperty(): Date | [Date, Date] {
         const datePropertyField = this.getPropertyFieldObject();
@@ -42,7 +44,7 @@ export class NotionDateParser extends NotionPropertyParser<Date | [Date, Date]> 
     }
 }
 
-export class NotionTitleParser extends NotionPropertyParser<string> {
+export class NotionTitleParser extends NotionPropertyParser {
     protected propertyField = 'title';
     protected parseProperty(): string {
         return this.getPropertyFieldObject().reduce(
@@ -52,7 +54,7 @@ export class NotionTitleParser extends NotionPropertyParser<string> {
     }
 }
 
-export class NotionImageParser extends NotionPropertyParser<string> {
+export class NotionImageParser extends NotionPropertyParser {
     protected propertyField = 'files';
     protected parseProperty(): string {
         const url = this.getPropertyFieldObject()[0].file.url;
@@ -60,7 +62,7 @@ export class NotionImageParser extends NotionPropertyParser<string> {
     }
 }
 
-export class NotionNumberParser extends NotionPropertyParser<number> {
+export class NotionNumberParser extends NotionPropertyParser {
     protected propertyField = 'number';
     protected parseProperty() {
         const number = this.getPropertyFieldObject();
