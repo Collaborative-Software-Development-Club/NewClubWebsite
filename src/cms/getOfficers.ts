@@ -1,13 +1,12 @@
-import { Client, isFullPageOrDatabase } from '@notionhq/client';
+import { Client } from '@notionhq/client';
 import assert from 'assert';
 import NotionDatabaseFetcher, { ComparableData } from './NotionFetcher';
-import { QueryDatabaseResponse } from '@notionhq/client/build/src/api-endpoints';
 import {
     NotionImageParser,
     NotionNumberParser,
     NotionRichTextParser,
     NotionTitleParser,
-} from './notionParsing';
+} from './parsing';
 
 export default async function getOfficers(): Promise<MemberData[]> {
     const notion = new Client({ auth: process.env.NOTION_API_KEY });

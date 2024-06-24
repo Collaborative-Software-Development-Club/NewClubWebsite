@@ -1,9 +1,7 @@
-import { Client, isFullDatabase, isFullPageOrDatabase } from '@notionhq/client';
-import { QueryDatabaseResponse } from '@notionhq/client/build/src/api-endpoints';
+import { Client } from '@notionhq/client';
 import assert from 'assert';
 import NotionDatabaseFetcher, { ComparableData } from './NotionFetcher';
-import { NotionDateParser, NotionRichTextParser, NotionTitleParser } from './notionParsing';
-import compareNotionDatesDescending from './compareNotionDatesDescending';
+import { NotionDateParser, NotionRichTextParser, NotionTitleParser } from './parsing';
 
 export default async function getEvents(): Promise<EventData[]> {
     const notion = new Client({ auth: process.env.NOTION_API_KEY });
