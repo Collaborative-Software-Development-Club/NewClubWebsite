@@ -16,7 +16,7 @@ export default abstract class NotionPropertyParser<ParsedPropertyType> {
             throw new NotionParsingError(propertyFieldObject, error.toString());
         }
     }
-    private propertyIsMissing() {
+    private propertyIsMissing(): boolean {
         return this.propertyFieldObject == null;
     }
     protected abstract parseProperty(): ParsedPropertyType;

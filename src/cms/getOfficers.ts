@@ -1,6 +1,6 @@
 import { Client } from '@notionhq/client';
 import assert from 'assert';
-import NotionDatabaseFetcher, { ComparableData } from './NotionFetcher';
+import NotionDatabaseFetcher, { ComparableData } from './NotionDatabaseFetcher';
 import {
     NotionImageParser,
     NotionNumberParser,

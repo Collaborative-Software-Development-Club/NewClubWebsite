@@ -6,7 +6,14 @@ import Padding from '@/ui_library/components/Padding';
 import formatDate from '@/helpers/formatDate';
 import { EventData } from '@/cms';
 
-const EventCard = (props: EventData) => {
+interface EventCardProps {
+    title: string;
+    description: string;
+    date: Date | [Date, Date];
+    location?: string;
+}
+
+const EventCard = (props: EventCardProps) => {
     let dateAsString: string;
     if (props.date instanceof Date) {
         dateAsString = formatDate(props.date);

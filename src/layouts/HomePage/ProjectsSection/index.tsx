@@ -6,8 +6,10 @@ import Section from '@/ui_library/components/Section';
 import React from 'react';
 import content from '@/websiteContent';
 import Heading2 from '@/ui_library/components/Heading2';
+import { getProjects } from '@/cms';
 
-const ProjectsSection = () => {
+export default async function ProjectsSection() {
+    const projects = await getProjects();
     return (
         <Section id="projects">
             {/* <Padding left="lg" top="md" bottom="lg" right="none"> */}
@@ -19,7 +21,7 @@ const ProjectsSection = () => {
                     <FlexContainer direction="row" fill scroll>
                         <Padding vertical="lg" horizontal="lg">
                             <FlexContainer direction="row" alignItems="stretch">
-                                {content.PROJECTS.map((project) => {
+                                {projects.map((project) => {
                                     return <ProjectCard {...project} key={project.title} />;
                                 })}
                             </FlexContainer>
@@ -30,6 +32,4 @@ const ProjectsSection = () => {
             {/* </Padding> */}
         </Section>
     );
-};
-
-export default ProjectsSection;
+}
