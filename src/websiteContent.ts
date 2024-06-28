@@ -1,4 +1,9 @@
 const content = {
+    TITLE: 'Collaborative Software Development Club @OSU',
+    SUBTITLE: 'Enarson 348 Wednesdays 6pm',
+    URL: 'https://www.csdclub.tech',
+    DESCRIPTION:
+        'We are a student org focused on working in collaborative software development projects.',
     DISCORD_LINK: 'https://discord.gg/ZU8fCvceQJ',
     MORE_INFO_LINK: '#info',
     BULLET_POINTS: [

@@ -1,4 +1,4 @@
-import { Client, isFullDatabase, isFullPage } from '@notionhq/client';
+import { Client, isFullPage } from '@notionhq/client';
 import {
     DatabaseObjectResponse,
     PageObjectResponse,
