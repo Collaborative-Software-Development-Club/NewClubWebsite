@@ -16,6 +16,7 @@ const content = {
     OFFICERS_CTA: 'Meet our Officers ->',
     ROTATING_TEXT: ['Code', 'Collab', 'Learn', 'Develop'],
     PROJECTS_HEADING: 'Our Projects',
+    /*
     PROJECTS: [
         {
             title: 'Full-Stack Blog App',
@@ -34,6 +35,7 @@ const content = {
             url: '',
         },
     ],
+    */
     EVENTS_HEADING: 'Our Events',
     MEMBERS_HEADING: 'Our Members',
     OFFICERS_HEADING: 'Officers',

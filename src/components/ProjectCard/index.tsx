@@ -8,7 +8,7 @@ import Padding from '@/ui_library/components/Padding';
 
 export interface ProjectCardProps {
     title: string;
-    subtitle: string;
+    // subtitle: string;
     tags: string[];
     description: string;
     url: string;
