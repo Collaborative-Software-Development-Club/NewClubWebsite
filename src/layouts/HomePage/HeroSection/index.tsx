@@ -22,10 +22,10 @@ const HeroSection = () => {
                 <FlexContainer justifyContent="center" direction="column" fill>
                     <Padding horizontal="lg" vertical="none">
                         <FlexContainer gap="md" direction="column">
-                            <Heading1>Collaborative Software Development Club @OSU</Heading1>
+                            <Heading1>{content.TITLE}</Heading1>
                             <FlexContainer direction="row" alignItems="start">
                                 <Link href={ics}>
-                                    <Subtitle>Enarson 348 Wednesdays 6pm</Subtitle>
+                                    <Subtitle>{content.SUBTITLE}</Subtitle>
                                 </Link>
                             </FlexContainer>
                             <FlexContainer
