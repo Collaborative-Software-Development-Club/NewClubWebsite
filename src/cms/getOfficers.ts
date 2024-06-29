@@ -1,6 +1,6 @@
 import { Client } from '@notionhq/client';
 import assert from 'assert';
-import { NotionDBFetcher } from './fetching';
+import { NotionDBFetcher } from './notion-db-fetcher';
 
 export default async function getOfficers(): Promise<MemberData[]> {
     const notion = new Client({ auth: process.env.NOTION_API_KEY });

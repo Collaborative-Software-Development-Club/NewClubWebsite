@@ -1,4 +1,4 @@
-import NotionPropertyParser from './NotionPropertyParser';
+import NotionPropertyParser from '../NotionPropertyParser';
 
 export default class NotionImageParser extends NotionPropertyParser<string> {
     constructor(property: any) {

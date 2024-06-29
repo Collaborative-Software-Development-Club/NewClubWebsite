@@ -9,6 +9,7 @@ import {
 import NotionPropertyParserFactory from './parsing/NotionPropertyParserFactory';
 import MissingPropertyValueError from './errors/MissingPropertyValueError';
 import MissingPropertyError from './errors/MissingPropertyError';
+import NotionAPIError from './errors/NotionAPIError';
 
 type NotionDBMapping<T> = Record<keyof T, string | { name: string; mandatory: boolean }>;
 
@@ -102,5 +103,3 @@ export default class NotionDBFetcher<T> {
         }
     }
 }
-
-class NotionAPIError extends Error {}

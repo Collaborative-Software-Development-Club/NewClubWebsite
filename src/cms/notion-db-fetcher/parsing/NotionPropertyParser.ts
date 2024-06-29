@@ -1,4 +1,4 @@
-import NotionParsingError from './ParsingError';
+import NotionParsingError from '../errors/ParsingError';
 
 export default abstract class NotionPropertyParser<ParsedPropertyType> {
     protected propertyFieldObject: any;

@@ -1,4 +1,4 @@
-import NotionPropertyParser from './NotionPropertyParser';
+import NotionPropertyParser from '../NotionPropertyParser';
 
 export default class NotionDateParser extends NotionPropertyParser<Date | [Date, Date]> {
     constructor(property: any) {
