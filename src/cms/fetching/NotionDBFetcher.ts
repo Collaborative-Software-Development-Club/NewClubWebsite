@@ -13,7 +13,7 @@ import MissingPropertyError from './errors/MissingPropertyError';
 type NotionDBMapping<T> = Record<keyof T, string | { name: string; mandatory: boolean }>;
 
 export default class NotionDBFetcher<T> {
-    private propertyParserFactory: NotionPropertyParserFactory = new NotionPropertyParserFactory();
+    private parserFactory: NotionPropertyParserFactory = new NotionPropertyParserFactory();
     constructor(
         private databaseId: string,
         private notionClient: Client,
@@ -33,34 +33,6 @@ export default class NotionDBFetcher<T> {
             throw new NotionAPIError(error.toString());
         }
     }
-    // TODO: refactor this method
-    private parsePageProperties(properties: any): T {
-        console.log(properties);
-        const values: Record<string, unknown> = {};
-        for (const key in this.mapping) {
-            const value = this.mapping[key];
-            let propertyName;
-            let mandatory = true;
-            if (typeof value === 'string') {
-                propertyName = value;
-            } else {
-                propertyName = value.name;
-                mandatory = value.mandatory;
-            }
-            if (!(propertyName in properties)) {
-                throw new MissingPropertyError(propertyName);
-            } else {
-                const propertyValue = this.propertyParserFactory
-                    .getPropertyParser(properties[propertyName])
-                    .parse();
-                if (mandatory) {
-                    this.assertPropertyValueIsMissing(propertyValue, propertyName);
-                }
-                values[key] = propertyValue;
-            }
-        }
-        return values as T;
-    }
     public parseResponse(response: QueryDatabaseResponse): T[] {
         const results = response.results;
         this.assertResultsAreFullPages(results);
@@ -69,6 +41,41 @@ export default class NotionDBFetcher<T> {
             return this.parsePageProperties(properties);
         });
         return items;
+    }
+    private parsePageProperties(properties: any): T {
+        console.log(properties);
+        const values: Record<string, unknown> = {};
+        for (const key in this.mapping) {
+            const value = this.mapping[key];
+            const propertyName = this.getPropertyName(value);
+            const propertyIsMandatory = this.checkIfPropertyIsMandatory(value);
+            if (!(propertyName in properties)) {
+                throw new MissingPropertyError(propertyName);
+            }
+            const propertyValue = this.parserFactory
+                .getPropertyParser(properties[propertyName])
+                .parse();
+            if (propertyIsMandatory) {
+                this.assertPropertyValueIsMissing(propertyValue, propertyName);
+            }
+            values[key] = propertyValue;
+        }
+        return values as T;
+    }
+    private getPropertyName(mappingValue: string | { name: string; mandatory: boolean }) {
+        if (typeof mappingValue === 'string') {
+            return mappingValue;
+        } else {
+            return mappingValue.name;
+        }
+    }
+    private checkIfPropertyIsMandatory(
+        mappingValue: string | { name: string; mandatory: boolean },
+    ) {
+        if (typeof mappingValue === 'string') {
+            return true;
+        }
+        return mappingValue.mandatory;
     }
     private assertResultsAreFullPages(
         results: (

@@ -1,1 +1,1 @@
-export { default as NotionDatabaseFetcher } from './NotionDatabaseFetcher';
+export { default as NotionDBFetcher } from './NotionDBFetcher';
