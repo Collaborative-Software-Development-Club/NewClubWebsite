@@ -1,7 +1,7 @@
 import { Client } from '@notionhq/client';
 import assert from 'assert';
-import { NotionDBFetcher } from './notion-db-fetcher';
 import compareNotionDatesDescending from './compareNotionDatesDescending';
+import { NotionDBFetcher } from '../../notion-db-fetcher';
 
 export default async function getProjects(): Promise<ProjectData[]> {
     const notion = new Client({ auth: process.env.NOTION_API_KEY });

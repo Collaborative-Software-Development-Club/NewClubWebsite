@@ -1,6 +1,6 @@
 import { Client } from '@notionhq/client';
 import assert from 'assert';
-import { NotionDBFetcher } from './notion-db-fetcher';
+import { NotionDBFetcher } from '../../notion-db-fetcher';
 import compareNotionDatesDescending from './compareNotionDatesDescending';
 
 export default async function getEvents(): Promise<EventData[]> {
