@@ -8,6 +8,7 @@ import content from '@/websiteContent';
 
 export default async function MembersPage() {
     const membersData = await getOfficers();
+    console.log(membersData);
     return (
         <>
             <FlexContainer direction="column" gap="sm" alignItems="stretch">
