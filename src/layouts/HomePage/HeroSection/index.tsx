@@ -34,7 +34,7 @@ const HeroSection = () => {
                                 convertToVerticalOnMobile
                             >
                                 <JoinDiscordWrapper>
-                                    <Button variant={'primary'} href={content.DISCORD_LINK}>
+                                    <Button variant={'primary'} href={content.DISCORD_LINK} newTab>
                                         Join Our Discord
                                     </Button>
                                 </JoinDiscordWrapper>

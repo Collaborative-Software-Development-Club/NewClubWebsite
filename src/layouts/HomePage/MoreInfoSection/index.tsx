@@ -17,9 +17,6 @@ const MoreInfoSection = () => {
                         <Button variant="secondary" href="/members">
                             {content.OFFICERS_CTA}
                         </Button>
-                        {/* <Button variant={'terciary'} href={PROJECTS_LINK}>
-                            {PROJECTS_CTA}
-                        </Button> */}
                     </FlexContainer>
                 </Padding>
             </Section>
