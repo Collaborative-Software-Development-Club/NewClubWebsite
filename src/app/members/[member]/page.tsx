@@ -1,14 +1,19 @@
-import { getMember } from '@/cms';
+import { getMember, getOfficers } from '@/cms';
 import MemberPage from '@/layouts/MemberPage';
-import MembersPage from '@/layouts/MembersPage';
-import Paragraph from '@/ui_library/components/Paragraph';
-import content from '@/websiteContent';
+
+export async function generateStaticParams() {
+    const membersData = await getOfficers();
+    console.log(membersData);
+    return membersData.map((member) => {
+        return {
+            member: member.name,
+        };
+    });
+}
 
 export default async function Member({ params }: { params: { member: string } }) {
+    console.log(`Getting member ${params.member}`);
     const member = await getMember(parseName(params.member));
-    if (!member) {
-        return <Paragraph>Member not found</Paragraph>;
-    }
     return (
         <main>
             <MemberPage {...member} />
