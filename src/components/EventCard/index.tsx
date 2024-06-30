@@ -16,8 +16,6 @@ interface EventCardProps {
 const EventCard = (props: EventCardProps) => {
     let dateAsString: string;
     if (props.date instanceof Date) {
-        console.log(props.date);
-        console.log(props.date.getHours());
         dateAsString = formatDate(props.date);
     } else {
         dateAsString = formatDate(props.date[0]) + ' to ' + formatDate(props.date[1]);
