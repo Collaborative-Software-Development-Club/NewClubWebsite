@@ -2,7 +2,7 @@
     backdrop-filter: blur(10px);
     border-radius: 20px;
     /* background: linear-gradient(45deg, var(--card-background-start),var(--card-background-end)); */
-    /* background-color: var(--card-background); */
+    background-color: var(--black);
     filter: var(--card-shadow);
     /* color: var(--cream); */
     /* color: var(--black); */
