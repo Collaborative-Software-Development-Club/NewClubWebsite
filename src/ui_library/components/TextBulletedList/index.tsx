@@ -1,7 +1,13 @@
 import FlexContainer from '../FlexContainer';
 import Paragraph from '../Paragraph';
 
-const TextBulletedList = ({ bullets }: { bullets: string[] }) => {
+/**
+ * Renders a bulleted list of strings.
+ * @param props
+ * @param {Array<string>} props.bullets - An array of strings representing the bullets of the list.
+ * @return {JSX.Element} The rendered bulleted list.
+ */
+const TextBulletedList = ({ bullets }: { bullets: string[] }): JSX.Element => {
     return (
         <ul>
             <FlexContainer direction="column" gap="sm">

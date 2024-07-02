@@ -1,5 +1,11 @@
-import FlexContainer from '../FlexContainer'
+import FlexContainer from '../FlexContainer';
 
+/**
+ *
+ * @param props
+ * @param {React.ReactNode} props.children
+ * @returns a footer with the provided children
+ */
 const Footer = ({ children }: OnlyChildren) => {
     return (
         <footer>
@@ -12,7 +18,7 @@ const Footer = ({ children }: OnlyChildren) => {
                 {children}
             </FlexContainer>
         </footer>
-    )
-}
+    );
+};
 
-export default Footer
+export default Footer;
