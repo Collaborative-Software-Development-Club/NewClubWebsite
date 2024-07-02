@@ -11,6 +11,7 @@
   "dependencies": {
     "@notionhq/client": "^2.2.15",
     "calendar-link": "^2.6.0",
+    "image-downloader": "^4.3.0",
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",
