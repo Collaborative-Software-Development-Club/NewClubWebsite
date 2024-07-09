@@ -1,13 +1,28 @@
 import { Client } from '@notionhq/client';
 import assert from 'assert';
 import { NotionDBFetcher } from '../../notion-db-fetcher';
+import { NotionNextJSImageHandler } from '@/cms';
 
 export default async function getOfficers(): Promise<MemberData[]> {
     const notion = new Client({ auth: process.env.NOTION_API_KEY });
     const databaseId = process.env.MEMBERS_DATABASE_ID;
     assert(databaseId !== undefined, "MEMBERS_DATABASE_ID can't be undefined");
     const dbFetcher = new NotionDBFetcher<MemberData>(databaseId, notion, mapping);
-    return (await dbFetcher.get()).sort(compareOfficers);
+    const notionData = await dbFetcher.get();
+    const handledImages = await handleImages(notionData);
+    const sortedData = handledImages.sort(compareOfficers);
+    return sortedData;
+}
+
+async function handleImages(memberData: MemberData[]) {
+    memberData.map(async (member) => {
+        const imageHandler = new NotionNextJSImageHandler(member.photoUrl);
+        return {
+            ...member,
+            photoUrl: await imageHandler.getDownloadedUrl(member.name),
+        };
+    });
+    return memberData;
 }
 
 export interface MemberData {
