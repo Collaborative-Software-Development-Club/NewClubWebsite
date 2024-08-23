@@ -36,6 +36,16 @@
    Clone the repository to your local machine:
 4. The project maintainer will review the PR and merge it
 
+## How to deploy
+
+We are currently using Vercel for hosting the website.
+Since we can't deploy from a GitHub organization on Vercel in the free plan, we have to use the vercel CLI.
+
+1. Run `vercel login` in the csdc-website-v2 directory. Log in with the club GitHub account.
+2. Run `vercel build` to create a local build of the website.
+3. Run `vercel deploy --prebuilt` to deploy a preview.
+4. Run `vercel --prod` to deploy to production.
+
 ## Learn More about Next.js
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
