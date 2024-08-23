@@ -19,7 +19,7 @@
 -   layouts: basically for the ui of different "pages" or other layouts (a broad definition)
 -   ui library: for reusable ui components that will later be exported for future projects (components not specific to this website)
 
-### Componente structure
+### Component structure
 
 -   Each component should have its own folder with a capitalized name
 -   Each component folder has an index.tsx file that corresponts to the component
@@ -35,6 +35,16 @@
 3. When the feature is done, create a pull request for the branch
    Clone the repository to your local machine:
 4. The project maintainer will review the PR and merge it
+
+## How to deploy
+
+We are currently using Vercel for hosting the website.
+Since we can't deploy from a GitHub organization on Vercel in the free plan, we have to use the vercel CLI.
+
+1. Run `vercel login` in the csdc-website-v2 directory. Log in with the club GitHub account.
+2. Run `vercel build` to create a local build of the website.
+3. Run `vercel deploy --prebuilt` to deploy a preview.
+4. Run `vercel --prod` to deploy to production.
 
 ## Learn More about Next.js
 

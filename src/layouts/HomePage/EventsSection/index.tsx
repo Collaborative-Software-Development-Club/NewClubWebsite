@@ -5,6 +5,7 @@ import Padding from '@/ui_library/components/Padding';
 import Section from '@/ui_library/components/Section';
 import content from '@/websiteContent';
 import { getEvents } from '@/cms';
+import Caroussel from '@/ui_library/components/Caroussel';
 
 export default async function EventsSection() {
     const eventData = await getEvents();
@@ -14,17 +15,11 @@ export default async function EventsSection() {
                 <Padding top="md" bottom="none" right="lg" left="lg">
                     <Heading2>{content.EVENTS_HEADING}</Heading2>
                 </Padding>
-                <FlexContainer direction="column" fill>
-                    <FlexContainer direction="row" fill scroll>
-                        <Padding vertical="lg" horizontal="lg">
-                            <FlexContainer direction="row" alignItems="stretch">
-                                {eventData.map((event) => {
-                                    return <EventCard {...event} key={event.title} />;
-                                })}
-                            </FlexContainer>
-                        </Padding>
-                    </FlexContainer>
-                </FlexContainer>
+                <Caroussel>
+                    {eventData.map((event) => {
+                        return <EventCard {...event} key={event.title} />;
+                    })}
+                </Caroussel>
             </FlexContainer>
         </Section>
     );

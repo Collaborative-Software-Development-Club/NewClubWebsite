@@ -1,6 +1,6 @@
 const content = {
     TITLE: 'Collaborative Software Development Club @OSU',
-    SUBTITLE: 'Enarson 348 Wednesdays 6pm',
+    SUBTITLE: 'Enarson 330 Wednesdays 6pm',
     URL: 'https://www.csdclub.tech',
     DESCRIPTION:
         'We are a student org focused on working in collaborative software development projects.',
