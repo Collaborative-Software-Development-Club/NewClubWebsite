@@ -19,7 +19,7 @@
 -   layouts: basically for the ui of different "pages" or other layouts (a broad definition)
 -   ui library: for reusable ui components that will later be exported for future projects (components not specific to this website)
 
-### Componente structure
+### Component structure
 
 -   Each component should have its own folder with a capitalized name
 -   Each component folder has an index.tsx file that corresponts to the component

@@ -17,12 +17,14 @@ export interface ProjectData {
     tags: string[];
     url: string;
     date: Date | [Date, Date];
+    playUrl?: string;
 }
 
 const mapping = {
     title: 'Name',
     description: 'Description',
     tags: 'Tags',
-    url: 'Link',
+    url: 'Code',
     date: 'Timeline',
+    playUrl: { name: 'Play URL', mandatory: false },
 };

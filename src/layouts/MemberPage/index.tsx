@@ -1,10 +1,7 @@
 import FlexContainer from '@/ui_library/components/FlexContainer';
 import Paragraph from '@/ui_library/components/Paragraph';
 import Padding from '@/ui_library/components/Padding';
-import MemberPhoto from '@/components/MemberCard/MemberCardPhoto';
 import Heading1 from '@/ui_library/components/Heading1';
-import styles from './MemberInfo.module.css';
-import Card from '@/ui_library/components/Card';
 import MemberPagePhoto from './MemberPagePhoto';
 
 interface MemberPageProps {

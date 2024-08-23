@@ -12,7 +12,7 @@ const Navigation = () => {
             <Button href="/members" variant="terciary">
                 Our Members
             </Button>
-            <Button href="/#projects" variant="terciary">
+            <Button href="/projects" variant="terciary">
                 Projects
             </Button>
             {/*             <Button href="" variant="terciary">

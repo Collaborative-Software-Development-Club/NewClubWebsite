@@ -8,10 +8,10 @@ import Padding from '@/ui_library/components/Padding';
 
 export interface ProjectCardProps {
     title: string;
-    // subtitle: string;
     tags: string[];
     description: string;
     url: string;
+    playUrl?: string;
 }
 
 const ProjectCard = (props: ProjectCardProps) => {
@@ -30,9 +30,16 @@ const ProjectCard = (props: ProjectCardProps) => {
                         </FlexContainer>
                         <Paragraph>{props.description}</Paragraph>
                     </FlexContainer>
-                    <Button href={props.url} variant="primary" newTab>
-                        Check it out!
-                    </Button>
+                    <FlexContainer direction="column" gap="sm">
+                        <Button href={props.url} variant="secondary" newTab>
+                            See the code
+                        </Button>
+                        {props.playUrl && (
+                            <Button href={`/play/${props.playUrl}`} variant="primary">
+                                Play
+                            </Button>
+                        )}
+                    </FlexContainer>
                 </FlexContainer>
             </Padding>
         </Card>
