@@ -17,17 +17,6 @@ export default async function MembersPage() {
                 <Padding vertical="none" horizontal="lg">
                     <Heading2>{content.OFFICERS_HEADING}</Heading2>
                 </Padding>
-                {/*                 <FlexContainer direction="column" fill>
-                    <FlexContainer direction="row" fill scroll>
-                        <Padding vertical="sm" horizontal="lg">
-                            <FlexContainer direction="row" alignItems="stretch">
-                                {content.OFFICERS.map((member) => {
-                                    return <MemberCard {...member} />;
-                                })}
-                            </FlexContainer>
-                        </Padding>
-                    </FlexContainer>
-                </FlexContainer> */}
                 <Padding vertical="sm" horizontal="lg">
                     <FlexContainer direction="row" alignItems="center" wrap justifyContent="start">
                         {membersData.map((member) => {
