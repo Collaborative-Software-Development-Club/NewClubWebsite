@@ -3,9 +3,13 @@ import assert from 'assert';
 import { NotionDBFetcher } from '../../notion-db-fetcher';
 import { NotionNextJSImageHandler } from '@/cms';
 
-export default async function getOfficers(): Promise<MemberData[]> {
+export default async function getOfficers(db: string): Promise<MemberData[]> {
     const notion = new Client({ auth: process.env.NOTION_API_KEY });
-    const databaseId = process.env.MEMBERS_DATABASE_ID;
+    let databaseId = process.env.MEMBERS_DATABASE_ID;
+    if (db === 'previous') {
+        databaseId = process.env.PREVIOUS_EBOARD;
+    }
+    
     assert(databaseId !== undefined, "MEMBERS_DATABASE_ID can't be undefined");
     const dbFetcher = new NotionDBFetcher<MemberData>(databaseId, notion, mapping);
     const notionData = await dbFetcher.get();

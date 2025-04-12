@@ -7,7 +7,8 @@ import { getOfficers } from '@/cms';
 import content from '@/websiteContent';
 
 export default async function MembersPage() {
-    const membersData = await getOfficers();
+    const membersData = await getOfficers('current');
+    const previousEboard = await getOfficers('previous');
     return (
         <>
             <FlexContainer direction="column" gap="sm" alignItems="stretch">
@@ -20,6 +21,23 @@ export default async function MembersPage() {
                 <Padding vertical="sm" horizontal="lg">
                     <FlexContainer direction="row" alignItems="center" wrap justifyContent="start">
                         {membersData.map((member) => {
+                            return (
+                                <MemberCard
+                                    name={member.name}
+                                    position={member.position}
+                                    photoUrl={member.photoUrl}
+                                    key={member.name}
+                                />
+                            );
+                        })}
+                    </FlexContainer>
+                </Padding>
+                <Padding vertical="none" horizontal="lg">
+                    <Heading2>{content.PREVIOUS_EBOARD}</Heading2>
+                </Padding>
+                <Padding vertical="sm" horizontal="lg">
+                    <FlexContainer direction="row" alignItems="center" wrap justifyContent="start">
+                        {previousEboard.map((member) => {
                             return (
                                 <MemberCard
                                     name={member.name}

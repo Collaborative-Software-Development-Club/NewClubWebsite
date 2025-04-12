@@ -39,6 +39,7 @@ const content = {
     EVENTS_HEADING: 'Our Events',
     MEMBERS_HEADING: 'Our Members',
     OFFICERS_HEADING: 'Officers',
+    PREVIOUS_EBOARD: 'Previous E-Board',
     /*
     EVENTS: [
         {

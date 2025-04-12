@@ -3,7 +3,7 @@ import parseUrlWithSpaces from '@/helpers/parseUrlWithSpaces';
 import MemberPage from '@/layouts/MemberPage';
 
 export async function generateStaticParams() {
-    const membersData = await getOfficers();
+    const membersData = await getOfficers('current');
     return membersData.map((member) => {
         return {
             member: member.name,
